@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Catálogo de productos prefabricados de hormigón de Arquitectura & Prefabricados." />
+    <meta name="author" content="Arquitectura & Prefabricados" />
+    <title>Productos | Arquitectura & Prefabricados</title>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/estilos.css" />
+
+    <style>
+        /* Ajuste específico para productos en cuadrícula */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: scale(1.03);
+        }
+        .product-card img {
+            width: 75%;
+            height: 220px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            cursor: pointer;
+            color: #222;
+        }
+        .product-card p {
+            padding: 0 10px 15px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        a.product-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        a.product-link:hover h3 {
+            color: #00796b;
+        }
+
+        /* Header actualizado igual que index */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #333;
+        }
+        .logo {
+            height: 70px;
+            margin-right: 20px;
+        }
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            flex-shrink: 0;
+            margin-right: auto;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+            color: #a2d5c6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Logo Arquitectura & Prefabricados" class="logo" />
+            <h1 class="header-title">ARQUITECTURA & PREFABRICADOS</h1>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-grid">
+            <article class="product-card">
+                <a href="productos/cerramientos.html" class="product-link">
+                    <img src="images/cerramientos.jpg" alt="Cerramientos Prefabricados" />
+                    <h3>Cerramientos Prefabricados</h3>
+                </a>
+                <p>Elementos prefabricados de hormigón de alta resistencia para delimitar terrenos y mejorar la seguridad.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/lavanderias.html" class="product-link">
+                    <img src="images/lavanderias.jpg" alt="Lavanderías" />
+                    <h3>Lavanderías</h3>
+                </a>
+                <p>Lavaderos prefabricados ideales para uso residencial o comercial, durables y fáciles de instalar.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/asaderos.html" class="product-link">
+                    <img src="images/asaderos.jpg" alt="Asaderos" />
+                    <h3>Asaderos</h3>
+                </a>
+                <p>Asaderos prefabricados para espacios recreativos, resistentes y estéticos.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/postes.html" class="product-link">
+                    <img src="images/postes.jpg" alt="Postes para Cercas" />
+                    <h3>Postes para Cercas</h3>
+                </a>
+                <p>Postes de hormigón duraderos para cercas de todo tipo, con excelente resistencia.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/losetas.html" class="product-link">
+                    <img src="images/losetas.jpg" alt="Losetas de Piso" />
+                    <h3>Losetas de Piso</h3>
+                </a>
+                <p>Losetas prefabricadas para pisos, resistentes y con acabados decorativos.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/bancas.html" class="product-link">
+                    <img src="images/bancas.jpg" alt="Bancas con o sin Espaldar" />
+                    <h3>Bancas con o sin Espaldar</h3>
+                </a>
+                <p>Bancas prefabricadas para mobiliario urbano y jardines, cómodas y resistentes.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/juegos-mesas-jardineras.html" class="product-link">
+                    <img src="images/juegos-mesas-jardineras.jpg" alt="Juegos de Mesas Jardineras" />
+                    <h3>Juegos de Mesas Jardineras</h3>
+                </a>
+                <p>Mesas y jardineras prefabricadas para áreas exteriores con diseño funcional y moderno.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/verjas.html" class="product-link">
+                    <img src="images/verjas.jpg" alt="Verjas" />
+                    <h3>Verjas</h3>
+                </a>
+                <p>Verjas de hormigón prefabricado para seguridad y decoración de propiedades.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/bordillos.html" class="product-link">
+                    <img src="images/bordillos.jpg" alt="Bordillos" />
+                    <h3>Bordillos</h3>
+                </a>
+                <p>Bordillos prefabricados para delimitar áreas y mejorar la estética urbana.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/bloques-decorativos.html" class="product-link">
+                    <img src="images/bloques-decorativos.jpg" alt="Bloques de Hormigón Decorativos" />
+                    <h3>Bloques de Hormigón Decorativos</h3>
+                </a>
+                <p>Bloques con acabados decorativos para fachadas y muros con estilo único.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/vallas-publicitarias.html" class="product-link">
+                    <img src="images/vallas-publicitarias.jpg" alt="Vallas Publicitarias" />
+                    <h3>Vallas Publicitarias</h3>
+                </a>
+                <p>Estructuras prefabricadas para soportar anuncios publicitarios con alta durabilidad.</p>
+            </article>
+            <article class="product-card">
+                <a href="productos/slats-chancheras.html" class="product-link">
+                    <img src="images/slats-chancheras.jpg" alt="Slats para Chancheras" />
+                    <h3>Slats para Chancheras</h3>
+                </a>
+                <p>Paneles prefabricados ideales para construcción de chancheras y áreas ganaderas.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Arquitectura & Prefabricados. Todos los derechos reservados.</p>
+        <a href="https://www.facebook.com/arquitecturaprefabricados" target="_blank" rel="noopener noreferrer">Visítanos en Facebook</a>
+    </footer>
+</body>
+</html>
