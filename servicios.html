@@ -1,48 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Servicios de diseño arquitectónico y construcción prefabricada de Arquitectura & Prefabricados." />
-    <meta name="author" content="Arquitectura & Prefabricados" />
-    <title>Servicios | Arquitectura & Prefabricados</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Servicios de arquitectura y construcción - Arquitectura & Prefabricados" />
+  <meta name="author" content="Arquitectura & Prefabricados" />
+  <title>Servicios | Arquitectura & Prefabricados</title>
 
-    <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/estilos.css" />
 
-    <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    .tabs-section {
+      display: flex;
+      height: 90vh;
+      gap: 20px;
+      padding: 40px;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .tab-block {
+      flex: 1;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 90vh;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+    }
+
+    .tab-block:hover {
+      transform: scale(1.03);
+    }
+
+    .tab-title {
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .tabs-content-container {
+      display: none;
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .tabs-content-container h3 {
+      font-size: 2rem;
+      color: #ff6600;
+      margin-top: 60px;
+    }
+
+    .tabs-content-container p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .imagen-galeria {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .imagen-galeria img {
+      flex: 1 1 calc(33.33% - 20px);
+      max-width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .tabs-section {
+        flex-direction: column;
+        height: auto;
+      }
+      .tab-block {
+        height: 300px;
+      }
+      .imagen-galeria img {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <img src="images/logo.png" alt="Logo Arquitectura & Prefabricados" class="logo" />
-            <h1 class="header-title">ARQUITECTURA & PREFABRICADOS</h1>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="header-container">
+      <img src="images/logo.png" alt="Logo Arquitectura & Prefabricados" class="logo" />
+      <h1 class="header-title">ARQUITECTURA & PREFABRICADOS</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="servicios-content" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-            <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 700; margin-bottom: 20px; color: #222;">Nuestros Servicios</h2>
-            <ul style="list-style-type: disc; padding-left: 20px; font-size: 1.1rem; color: #444;">
-                <li>Diseño arquitectónico personalizado para proyectos residenciales y comerciales.</li>
-                <li>Diseño estructural con énfasis en prefabricados de hormigón de alta resistencia.</li>
-                <li>Construcción de obras civiles utilizando sistemas de hormigón armado y estructura metálica.</li>
-                <li>Remodelaciones, mejoras y reparaciones generales para edificaciones existentes.</li>
-                <li>Asesoría integral en la elección de materiales y técnicas constructivas innovadoras.</li>
-            </ul>
-        </section>
-    </main>
+  <!-- PESTAÑAS CON IMÁGENES -->
+  <section class="tabs-section">
+    <div class="tab-block" style="background-image: url('images/diseno.jpg');" id="btnDiseno">
+      <div class="tab-title">DISEÑO</div>
+    </div>
+    <div class="tab-block" style="background-image: url('images/construccion.jpg');" id="btnConstruccion">
+      <div class="tab-title">CONSTRUCCIÓN</div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Arquitectura & Prefabricados. Todos los derechos reservados.</p>
-        <a href="https://www.facebook.com/arquitecturaprefabricados" target="_blank" rel="noopener noreferrer">Visítanos en Facebook</a>
-    </footer>
+  <!-- CONTENIDO DETALLADO OCULTO HASTA CLIC -->
+  <div class="tabs-content-container">
+    <section id="diseno">
+      <h3>Diseño con propósito, ideas que se construyen</h3>
+      <p>En Arquitectura & Prefabricados entendemos que un buen proyecto no es solo una planta bien resuelta: es una propuesta pensada para mejorar la vida de quienes la habitan. Cada diseño nace de una escucha activa, una mirada estratégica y una búsqueda constante de calidad espacial y material.</p>
+      <p>Desde el primer trazo hasta el render final, nuestro equipo acompaña a cada cliente para transformar sus ideas en un proyecto arquitectónico sólido, funcional y con identidad propia.</p>
+      <div class="imagen-galeria">
+        <img src="images/diseno1.jpg" alt="Diseño 1">
+        <img src="images/diseno2.jpg" alt="Diseño 2">
+        <img src="images/diseno3.jpg" alt="Diseño 3">
+      </div>
+    </section>
+
+    <section id="construccion">
+      <h3>Obras que se concretan con compromiso y calidad</h3>
+      <p>Construir es hacer realidad una idea. Para que esa realidad esté a la altura, hace falta más que materiales: hace falta método, experiencia y una ejecución cuidada.</p>
+      <p>Contamos con un equipo técnico y operativo que trabaja con procesos estandarizados y seguimiento constante. Nos enfocamos en cumplir con lo pautado, optimizando recursos sin resignar calidad, y brindando soluciones eficientes durante toda la obra.</p>
+      <div class="imagen-galeria">
+        <img src="images/construccion1.jpg" alt="Construcción 1">
+        <img src="images/construccion2.jpg" alt="Construcción 2">
+        <img src="images/construccion3.jpg" alt="Construcción 3">
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Arquitectura & Prefabricados. Todos los derechos reservados.</p>
+    <a href="https://www.facebook.com/arquitecturaprefabricados" target="_blank">Visítanos en Facebook</a>
+  </footer>
+
+  <script>
+    const btnDiseno = document.getElementById("btnDiseno");
+    const btnConstruccion = document.getElementById("btnConstruccion");
+    const contentContainer = document.querySelector(".tabs-content-container");
+
+    function scrollToSection(id) {
+      const target = document.getElementById(id);
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function showAndScrollToSection(id) {
+      contentContainer.style.display = 'block';
+      scrollToSection(id);
+    }
+
+    btnDiseno.addEventListener("click", () => showAndScrollToSection("diseno"));
+    btnConstruccion.addEventListener("click", () => showAndScrollToSection("construccion"));
+  </script>
 </body>
 </html>
