@@ -1,4 +1,4 @@
-/* Reset y básicos */
+/* RESET Y BÁSICOS */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   color: #333;
 }
 
-/* Header */
+/* HEADER */
 .header-container {
   display: flex;
   align-items: center;
@@ -72,7 +72,53 @@ nav a:hover {
   color: #a2d5c6;
 }
 
-/* Tabs principal (DISEÑO / CONSTRUCCIÓN) */
+/* HERO - SECCIÓN PRINCIPAL INICIO */
+.hero {
+  position: relative;
+  background-image: url('../images/hero-fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  color: white;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  z-index: 0;
+}
+
+.presentacion, .lema {
+  position: relative;
+  z-index: 1;
+}
+
+.presentacion {
+  max-width: 600px;
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+
+.lema {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  text-align: right;
+  margin-top: 20px;
+  text-shadow: 0 0 6px rgba(0,0,0,0.8);
+}
+
+/* TABS DISEÑO / CONSTRUCCIÓN */
 .tabs-section {
   margin-top: 40px;
   display: flex;
@@ -88,10 +134,10 @@ nav a:hover {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   cursor: pointer;
-  text-align: center;
   background-color: white;
+  text-align: center;
 }
 
 .tab-block:hover {
@@ -123,7 +169,7 @@ nav a:hover {
   border-top: 2px solid #ff6600;
 }
 
-/* Contenido detallado oculto hasta clic */
+/* CONTENIDO OCULTO TABS */
 .tabs-content-container {
   display: none;
   max-width: 900px;
@@ -145,7 +191,7 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-/* Galería deslizable tipo "cinta" */
+/* GALERÍA */
 .imagen-galeria {
   display: flex;
   overflow-x: auto;
@@ -170,7 +216,200 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* Footer */
+/* PRODUCTOS */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+.product-card h3 {
+  margin: 20px 0 10px;
+  cursor: pointer;
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+a.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.product-link:hover h3 {
+  color: #00796b;
+}
+
+.info-productos {
+  text-align: right;
+  padding: 10px 40px 0;
+}
+
+.titulo-productos {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+  background-color: #333;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.descripcion-productos {
+  font-size: 1rem;
+  color: #eee;
+  max-width: 400px;
+  margin-left: auto;
+  line-height: 1.4;
+}
+
+/* SECCIÓN CONTACTO */
+.coordina-reunion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.info-reunion {
+  flex: 1 1 45%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.form-reunion {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-reunion input,
+.form-reunion textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-reunion button {
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-reunion button:hover {
+  background-color: #555;
+}
+
+.contacto-info {
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.contacto-info a {
+  color: #00796b;
+  text-decoration: none;
+}
+
+.contacto-info a:hover {
+  text-decoration: underline;
+}
+
+.redes-sociales {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.redes-sociales h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.iconos-redes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.iconos-redes img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s;
+}
+
+.iconos-redes img:hover {
+  transform: scale(1.1);
+}
+
+.mapa-ubicacion {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.titulo-mapa {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.mapa-container iframe {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
 footer {
   background-color: #333;
   color: white;
@@ -181,7 +420,7 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .tabs-section {
     flex-direction: column;
@@ -192,13 +431,17 @@ footer {
     flex: 1 1 100%;
   }
 
-  .tab-title-below {
-    font-size: 1.8rem;
+  .coordina-reunion {
+    flex-direction: column;
   }
 
-  .imagen-galeria {
-    flex-direction: row;
-    overflow-x: scroll;
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 40px 10px;
+  }
+
+  .product-card img {
+    height: 220px;
   }
 
   .imagen-galeria img {
@@ -216,5 +459,13 @@ footer {
   .imagen-galeria img {
     width: 200px;
     height: 140px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  .product-card h3 {
+    font-size: 1.2rem;
   }
 }
