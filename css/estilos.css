@@ -1,0 +1,220 @@
+/* Reset y básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #333;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 70px;
+  margin-right: 20px;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  flex-shrink: 0;
+  margin-right: auto;
+  position: relative;
+  padding-right: 20px;
+}
+
+.header-title::after {
+  content: "";
+  position: absolute;
+  top: -15%;
+  right: 0;
+  height: 140%;
+  width: 6px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+  border-radius: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #555;
+  color: #a2d5c6;
+}
+
+/* Tabs principal (DISEÑO / CONSTRUCCIÓN) */
+.tabs-section {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  padding: 100px 40px 40px 40px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.tab-block {
+  flex: 0 0 40%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  background-color: white;
+}
+
+.tab-block:hover {
+  transform: scale(1.03);
+}
+
+.tab-image {
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#btnDiseno .tab-image {
+  background-image: url('images/diseno.jpg');
+}
+
+#btnConstruccion .tab-image {
+  background-image: url('images/construccion.jpg');
+}
+
+.tab-title-below {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+  border-top: 2px solid #ff6600;
+}
+
+/* Contenido detallado oculto hasta clic */
+.tabs-content-container {
+  display: none;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tabs-content-container h3 {
+  font-size: 2rem;
+  color: #ff6600;
+  margin-top: 60px;
+}
+
+.tabs-content-container p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Galería deslizable tipo "cinta" */
+.imagen-galeria {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 15px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.imagen-galeria img {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.imagen-galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tabs-section {
+    flex-direction: column;
+    padding: 60px 20px 20px 20px;
+  }
+
+  .tab-block {
+    flex: 1 1 100%;
+  }
+
+  .tab-title-below {
+    font-size: 1.8rem;
+  }
+
+  .imagen-galeria {
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+
+  .imagen-galeria img {
+    width: 240px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-title-below {
+    font-size: 1.6rem;
+    padding: 15px 0;
+  }
+
+  .imagen-galeria img {
+    width: 200px;
+    height: 140px;
+  }
+}
