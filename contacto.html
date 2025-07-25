@@ -3,88 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arquitectura & Prefabricados - Soluciones Constructivas en Ambato</title>
-  <meta name="description" content="Arquitectura & Prefabricados en Ambato, Ecuador. Servicios de diseño arquitectónico, construcción con hormigón armado, prefabricados y remodelaciones. Calidad y compromiso." />
-  <meta name="keywords" content="arquitectura Ambato, prefabricados hormigón, diseño estructural, construcción civil, cerramientos prefabricados, remodelaciones Ambato" />
+  
+  <!-- SEO mejorado -->
+  <title>Contacto - Arquitectura & Prefabricados | Ambato, Ecuador</title>
+  <meta name="description" content="Contacto con Arquitectura & Prefabricados en Ambato. Coordina tu reunión para proyectos de arquitectura, construcción y prefabricados de hormigón." />
+  <meta name="keywords" content="contacto arquitectura Ambato, asesoría construcción, prefabricados hormigón, diseño estructural, reuniones arquitectura, servicios construcción Ecuador" />
   <meta name="author" content="Arquitectura & Prefabricados" />
-  <link rel="canonical" href="https://arquitecturayprefabricados.github.io/mipagina/index.html" />
-
-  <!-- Fuentes -->
+  <link rel="canonical" href="https://arquitecturayprefabricados.github.io/mipagina/contacto.html" />
+  
+  <!-- Fuentes e iconos -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/estilos.css" />
-
-  <!-- Datos estructurados LocalBusiness -->
+  
+  <!-- Schema LocalBusiness para SEO local -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Arquitectura & Prefabricados",
     "image": "https://arquitecturayprefabricados.github.io/mipagina/images/logo.png",
-    "telephone": "+593992941294",
+    "telephone": "+593 992941294",
     "email": "andre5125@yahoo.es",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Bolivariana y Víctor Hugo",
       "addressLocality": "Ambato",
       "addressRegion": "Tungurahua",
+      "postalCode": "180104",
       "addressCountry": "EC"
     },
-    "url": "https://arquitecturayprefabricados.github.io/mipagina/index.html",
+    "url": "https://arquitecturayprefabricados.github.io/mipagina/contacto.html",
     "sameAs": [
       "https://www.facebook.com/arquitecturaprefabricados",
       "https://www.instagram.com/arquitecturayprefabricados",
       "https://wa.me/593992941294"
-    ],
-    "description": "Servicios de arquitectura, construcción, diseño estructural y prefabricados de hormigón en Ambato, Ecuador."
+    ]
   }
   </script>
 </head>
 <body>
 
+  <!-- Encabezado -->
   <header class="header-container" role="banner">
     <div style="display: flex; align-items: center;">
       <img src="images/logo.png" alt="Logo Arquitectura & Prefabricados" class="logo" />
       <h1 class="header-title">ARQUITECTURA & PREFABRICADOS</h1>
     </div>
     <nav role="navigation" aria-label="Menú principal">
-      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="index.html">Inicio</a>
       <a href="productos.html">Productos</a>
       <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
     </nav>
   </header>
 
-  <main role="main">
-    <section class="hero" aria-label="Presentación de Arquitectura & Prefabricados">
-      <div class="presentacion">
-        <h2>Soluciones constructivas de calidad en Ambato</h2>
-        <p>Arquitectura & Prefabricados ofrece diseño arquitectónico, construcción con sistemas de hormigón armado, prefabricados y remodelaciones para proyectos residenciales, comerciales e industriales.</p>
+  <!-- Coordina una reunión -->
+  <main>
+    <section class="coordina-reunion" aria-labelledby="titulo-reunion">
+      <div class="info-reunion">
+        <h2 id="titulo-reunion">Coordina una reunión</h2>
+        <p>Nos encantaría acompañarte en cada paso para hacer realidad tu proyecto.</p>
+        <p>Ponte en contacto y recibe el asesoramiento que necesitas para resolver todas tus dudas.</p>
       </div>
-      <div class="lema">Construimos tus ideas con compromiso y profesionalismo</div>
+
+      <form class="form-reunion" action="mailto:andre5125@yahoo.es" method="post" enctype="text/plain" aria-label="Formulario de contacto">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" name="nombre" placeholder="Nombre" required aria-required="true" />
+        
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" type="tel" name="telefono" placeholder="Teléfono" required aria-required="true" />
+        
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Email" required aria-required="true" />
+        
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required aria-required="true"></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
     </section>
 
-    <section class="tabs-section" aria-label="Servicios principales">
-      <article class="tab-block" tabindex="0" role="button" aria-pressed="false" aria-describedby="desc-diseno" style="background-image: url('images/diseno.jpg');">
-        <h3 class="tab-title">Diseño</h3>
-        <p id="desc-diseno" class="sr-only">Servicio de diseño arquitectónico y estructural, creando proyectos funcionales y estéticos.</p>
-      </article>
-      <article class="tab-block" tabindex="0" role="button" aria-pressed="false" aria-describedby="desc-construccion" style="background-image: url('images/construccion.jpg');">
-        <h3 class="tab-title">Construcción</h3>
-        <p id="desc-construccion" class="sr-only">Construcción de obras civiles con hormigón armado y estructuras metálicas con calidad y compromiso.</p>
-      </article>
+    <!-- Datos de contacto -->
+    <section class="contacto-info" aria-label="Datos de contacto">
+      <p><strong>Teléfonos:</strong> <a href="tel:+593992941294">0992941294</a> | <a href="tel:+59332405123">032405123</a></p>
+      <p><strong>Dirección:</strong> Av. Bolivariana y Víctor Hugo, Ambato, Tungurahua, Ecuador</p>
+      <p><strong>Email:</strong> <a href="mailto:andre5125@yahoo.es">andre5125@yahoo.es</a></p>
+    </section>
+
+    <!-- Redes sociales -->
+    <section class="redes-sociales" aria-label="Redes sociales">
+      <h2>Nuestras redes</h2>
+      <div class="iconos-redes">
+        <a href="https://www.facebook.com/arquitecturaprefabricados" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
+          <img src="images/facebook-icon.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/arquitecturayprefabricados" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+          <img src="images/instagram-icon.png" alt="Instagram" />
+        </a>
+        <a href="https://wa.me/593992941294" target="_blank" aria-label="WhatsApp" rel="noopener noreferrer">
+          <img src="images/whatsapp-icon.png" alt="WhatsApp" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Mapa de ubicación -->
+    <section class="mapa-ubicacion" aria-label="Mapa de ubicación">
+      <h2 class="titulo-mapa">ESTAMOS AQUÍ..!</h2>
+      <div class="mapa-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4949.7096600957575!2d-78.61614592414165!3d-1.2603164356001315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d383b1e77d784b%3A0x44912b3ceca9a579!2sARQUITECTURA%20Y%20PREFABRICADOS!5e1!3m2!1ses!2sec!4v1751487892799!5m2!1ses!2sec" 
+          width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade" title="Ubicación Arquitectura y Prefabricados en Ambato">
+        </iframe>
+      </div>
     </section>
   </main>
-
-  <footer role="contentinfo">
-    <p>&copy; 2025 Arquitectura & Prefabricados. Todos los derechos reservados.</p>
-    <p>Ubicados en Ambato, Ecuador | <a href="https://www.google.com/maps?q=Ambato,+Ecuador" target="_blank" rel="noopener">Ver en Google Maps</a></p>
-  </footer>
-
-  <!-- Script para interacción tabs si la tienes -->
-  <script src="js/tabs.js" defer></script>
 
 </body>
 </html>
