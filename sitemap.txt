@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://arquitecturayprefabricados.github.io/mipagina/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://arquitecturayprefabricados.github.io/mipagina/contacto.html</loc>
+    <lastmod>2025-07-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://arquitecturayprefabricados.github.io/mipagina/productos.html</loc>
+    <lastmod>2025-07-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://arquitecturayprefabricados.github.io/mipagina/galeria.html</loc>
+    <lastmod>2025-07-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
