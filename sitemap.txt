@@ -1,16 +1,4 @@
-
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://arquitecturayprefabricados.github.io/mipagina/</loc>
-  </url>
-  <url>
-    <loc>https://arquitecturayprefabricados.github.io/mipagina/productos.html</loc>
-  </url>
-  <url>
-    <loc>https://arquitecturayprefabricados.github.io/mipagina/servicios.html</loc>
-  </url>
-  <url>
-    <loc>https://arquitecturayprefabricados.github.io/mipagina/contacto.html</loc>
-  </url>
-</urlset>
+https://arquitecturayprefabricados.github.io/mipagina/
+https://arquitecturayprefabricados.github.io/mipagina/productos.html
+https://arquitecturayprefabricados.github.io/mipagina/servicios.html
+https://arquitecturayprefabricados.github.io/mipagina/contacto.html
