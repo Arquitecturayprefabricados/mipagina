@@ -284,18 +284,25 @@
         <div class="ap-hero-stage">
           <div class="ap-hero-background" role="img"
                aria-label="Visualización arquitectónica de una vivienda residencial"></div>
-          <div class="ap-slogan">
-           <span
+       
+<!-- LEMA CON ESCRITURA PROGRESIVA -->
+
+<div class="ap-slogan">
+
+  <span
     class="ap-slogan-line ap-slogan-first"
     id="ap-typed-ideas">
     Diseñamos IDEAS........
   </span>
 
-  <span class="ap-slogan-line ap-slogan-second">
+  <span
+    class="ap-slogan-line ap-slogan-second"
+    id="ap-typed-suenos">
     Construimos tus SUEÑOS....!
   </span>
 
 </div>
+
           </div>
           <div class="ap-architect" id="ap-architect" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="670 95 1160 785" width="1160" height="785" aria-hidden="true" focusable="false">
@@ -372,6 +379,7 @@
       const site = document.getElementById('ap-site');
       const sketch = document.getElementById('ap-architect');
       const typedText = document.getElementById('ap-typed-ideas');
+      const typedSecond = document.getElementById('ap-typed-suenos');
 
       if (!loader || !site) return;
 
@@ -391,43 +399,98 @@
       
 /* EFECTO DE ESCRITURA DEL LEMA */
 
-const textoCompleto = typedText
+
+/* EFECTO DE ESCRITURA DE LAS DOS LÍNEAS */
+
+const textoPrimero = typedText
   ? typedText.textContent.trim()
   : "";
 
-if (typedText && !reduced) {
-  typedText.textContent = "";
+const textoSegundo = typedSecond
+  ? typedSecond.textContent.trim()
+  : "";
+
+if (!reduced) {
+
+  if (typedText) {
+    typedText.textContent = "";
+  }
+
+  if (typedSecond) {
+    typedSecond.textContent = "";
+  }
+
 }
 
-function escribirLema() {
+let escrituraIniciada = false;
 
-  if (!typedText || reduced) return;
+/* FUNCIÓN PARA ESCRIBIR CADA FRASE */
 
-  const letras = Array.from(textoCompleto);
+function escribirTexto(elemento, texto, alTerminar) {
+
+  if (!elemento) {
+    if (alTerminar) alTerminar();
+    return;
+  }
+
+  const letras = Array.from(texto);
   let posicion = 0;
 
-  typedText.classList.add("ap-typing");
+  elemento.classList.add("ap-typing");
 
   function escribirLetra() {
 
     if (posicion < letras.length) {
 
-      typedText.textContent += letras[posicion];
+      elemento.textContent += letras[posicion];
+
       posicion++;
 
-      setTimeout(escribirLetra, 85);
+      window.setTimeout(escribirLetra, 85);
 
     } else {
 
-      setTimeout(function () {
-        typedText.classList.remove("ap-typing");
-      }, 700);
+      window.setTimeout(function () {
+
+        elemento.classList.remove("ap-typing");
+
+        if (alTerminar) {
+          alTerminar();
+        }
+
+      }, 400);
 
     }
 
   }
 
   escribirLetra();
+
+}
+
+/* ANIMAR EL LEMA COMPLETO */
+
+function escribirLema() {
+
+  if (reduced || escrituraIniciada) return;
+
+  escrituraIniciada = true;
+
+  // PRIMERA LÍNEA
+  escribirTexto(
+    typedText,
+    textoPrimero,
+
+    function () {
+
+      // SEGUNDA LÍNEA
+      escribirTexto(
+        typedSecond,
+        textoSegundo
+      );
+
+    }
+  );
 
 }
 
