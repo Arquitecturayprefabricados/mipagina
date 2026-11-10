@@ -285,8 +285,17 @@
           <div class="ap-hero-background" role="img"
                aria-label="Visualización arquitectónica de una vivienda residencial"></div>
           <div class="ap-slogan">
-            <span class="ap-slogan-line ap-slogan-first">Diseñamos IDEAS........</span>
-            <span class="ap-slogan-line ap-slogan-second">Construimos tus SUEÑOS....!</span>
+           <span
+    class="ap-slogan-line ap-slogan-first"
+    id="ap-typed-ideas">
+    Diseñamos IDEAS........
+  </span>
+
+  <span class="ap-slogan-line ap-slogan-second">
+    Construimos tus SUEÑOS....!
+  </span>
+
+</div>
           </div>
           <div class="ap-architect" id="ap-architect" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="670 95 1160 785" width="1160" height="785" aria-hidden="true" focusable="false">
@@ -362,6 +371,8 @@
       const loader = document.getElementById('ap-preloader');
       const site = document.getElementById('ap-site');
       const sketch = document.getElementById('ap-architect');
+      const typedText = document.getElementById('ap-typed-ideas');
+
       if (!loader || !site) return;
 
       // Escalonar el dibujo de las líneas del SVG original.
@@ -377,11 +388,58 @@
       const MAX_MS = 5200; // Límite para recursos lentos.
       let startedReveal = false;
       let scheduled = false;
+      
+/* EFECTO DE ESCRITURA DEL LEMA */
+
+const textoCompleto = typedText
+  ? typedText.textContent.trim()
+  : "";
+
+if (typedText && !reduced) {
+  typedText.textContent = "";
+}
+
+function escribirLema() {
+
+  if (!typedText || reduced) return;
+
+  const letras = Array.from(textoCompleto);
+  let posicion = 0;
+
+  typedText.classList.add("ap-typing");
+
+  function escribirLetra() {
+
+    if (posicion < letras.length) {
+
+      typedText.textContent += letras[posicion];
+      posicion++;
+
+      setTimeout(escribirLetra, 85);
+
+    } else {
+
+      setTimeout(function () {
+        typedText.classList.remove("ap-typing");
+      }, 700);
+
+    }
+
+  }
+
+  escribirLetra();
+
+}
+
 
       function reveal() {
         if (startedReveal) return;
         startedReveal = true;
         site.classList.add('ap-visible');
+        if (!reduced) {
+      setTimeout(escribirLema, 900);
+      }    
+
         loader.classList.add('ap-hidden');
         if (sketch) {
           window.setTimeout(() => sketch.classList.add('ap-drawing'), reduced ? 0 : 550);
