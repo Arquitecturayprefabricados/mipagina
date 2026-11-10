@@ -1,1248 +1,1820 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Productos | Arquitectura y Prefabricados</title>
-
-  <meta
-    name="description"
-    content="Productos prefabricados de hormigón en Ambato. Cerramientos, bloques decorativos, postes, lavaderos, bancas, mesas, jardineras, bordillos, asaderos y más."
-  />
-
-  <meta name="author" content="Arquitectura y Prefabricados" />
-  <meta name="robots" content="index, follow" />
-
-  <link
-    rel="canonical"
-    href="https://arquitecturayprefabricados.github.io/mipagina/productos.html"
-  />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="es_EC" />
-  <meta property="og:site_name" content="Arquitectura y Prefabricados" />
-  <meta property="og:title" content="Productos | Arquitectura y Prefabricados" />
-  <meta
-    property="og:description"
-    content="Catálogo de productos prefabricados de hormigón fabricados por Arquitectura y Prefabricados."
-  />
-  <meta
-    property="og:url"
-    content="https://arquitecturayprefabricados.github.io/mipagina/productos.html"
-  />
-  <meta
-    property="og:image"
-    content="https://arquitecturayprefabricados.github.io/mipagina/images/logo.png"
-  />
-
-  <meta name="twitter:card" content="summary" />
-
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    :root {
-      --bg-dark: #2d2d2f;
-      --bg-darker: #242426;
-      --text-dark: #2b2b2b;
-      --text-soft: #666;
-      --white: #ffffff;
-      --accent: #b7864b;
-      --accent-dark: #8d673c;
-      --line: rgba(255,255,255,.18);
-      --shadow: 0 18px 45px rgba(0,0,0,.12);
-      --radius: 20px;
-      --whatsapp: #25D366;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--text-dark);
-      background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 32%),
-        radial-gradient(circle at 80% 25%, rgba(255,255,255,.26) 0%, rgba(255,255,255,0) 28%),
-        radial-gradient(circle at 40% 80%, rgba(0,0,0,.03) 0%, rgba(0,0,0,0) 25%),
-        linear-gradient(180deg, #efefed 0%, #e8e6e2 100%);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    /* EFECTO TIPO CONCRETO SUAVE */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: .18;
-      background-image:
-        radial-gradient(rgba(0,0,0,.18) 0.7px, transparent 0.7px),
-        radial-gradient(rgba(255,255,255,.35) 0.7px, transparent 0.7px);
-      background-position: 0 0, 18px 18px;
-      background-size: 36px 36px;
-      z-index: 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* HEADER */
-    .ap-header {
-      position: relative;
-      z-index: 20;
-      width: 100%;
-      background: linear-gradient(90deg, #303033 0%, #2a2a2c 100%);
-      border-bottom: 6px solid #dfe7f1;
-      box-shadow: 0 8px 25px rgba(0,0,0,.15);
-    }
-
-    .ap-header-inner {
-      max-width: 1600px;
-      margin: 0 auto;
-      min-height: 104px;
-      padding: 14px 26px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .ap-brand {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      min-width: 0;
-      flex: 1 1 auto;
-    }
-
-    .ap-logo-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .ap-logo {
-      width: 62px;
-      height: 62px;
-      object-fit: contain;
-      opacity: .78;
-      filter: grayscale(100%) brightness(1.9) contrast(.9);
-    }
-
-    .ap-brand-name {
-      color: rgba(255,255,255,.97);
-      font-size: clamp(1.3rem, 2.25vw, 2.2rem);
-      font-weight: 400;
-      letter-spacing: .03em;
-      line-height: 1.05;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .ap-divider {
-      width: 4px;
-      align-self: stretch;
-      border-radius: 999px;
-      background: rgba(255,255,255,.32);
-      flex-shrink: 0;
-    }
-
-    .ap-nav {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 34px;
-      flex-wrap: wrap;
-      flex: 0 0 auto;
-    }
-
-    .ap-nav a {
-      color: rgba(255,255,255,.96);
-      font-size: 1rem;
-      font-weight: 400;
-      letter-spacing: .01em;
-      padding: 10px 0;
-      position: relative;
-      transition: opacity .25s ease, transform .25s ease;
-    }
-
-    .ap-nav a:hover {
-      opacity: .85;
-      transform: translateY(-1px);
-    }
-
-    .ap-nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 2px;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: width .25s ease;
-    }
-
-    .ap-nav a:hover::after,
-    .ap-nav a.ap-active::after {
-      width: 100%;
-    }
-
-    /* HERO PRODUCTOS */
-    .products-hero {
-      position: relative;
-      z-index: 2;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 54px 24px 30px;
-    }
-
-    .products-hero-box {
-      position: relative;
-      overflow: hidden;
-      border-radius: 28px;
-      padding: 42px 40px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.78), rgba(255,255,255,.58)),
-        linear-gradient(180deg, rgba(183,134,75,.08), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.55);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(7px);
-    }
-
-    .products-hero-box::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.08), transparent 40%),
-        linear-gradient(315deg, rgba(0,0,0,.03), transparent 30%);
-    }
-
-    .products-kicker {
-      display: inline-block;
-      margin-bottom: 12px;
-      color: var(--accent-dark);
-      font-size: .92rem;
-      font-weight: 700;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-
-    .products-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.2rem, 4vw, 4rem);
-      line-height: .98;
-      color: #2b2b2b;
-      margin-bottom: 18px;
-      font-weight: 600;
-    }
-
-    .products-subtitle {
-      max-width: 860px;
-      color: #454545;
-      font-size: 1.06rem;
-      line-height: 1.85;
-    }
-
-    .products-subtitle strong {
-      color: #2e2e2e;
-      font-weight: 700;
-    }
-
-    /* SECCIONES PRODUCTOS */
-    .products-section {
-      position: relative;
-      z-index: 2;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 24px 24px 80px;
-    }
-
-    .product-card {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 42px;
-      align-items: center;
-      margin-bottom: 52px;
-      background: rgba(255,255,255,.74);
-      border: 1px solid rgba(255,255,255,.7);
-      border-radius: 26px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-    }
-
-    .product-card.reverse {
-      grid-template-columns: .95fr 1.05fr;
-    }
-
-    .product-card.reverse .product-visual {
-      order: 2;
-    }
-
-    .product-card.reverse .product-content {
-      order: 1;
-    }
-
-    .product-visual {
-      position: relative;
-      min-height: 440px;
-      height: 100%;
-      overflow: hidden;
-      background: #ddd;
-      cursor: pointer;
-    }
-
-    .product-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .55s ease, filter .4s ease;
-    }
-
-    .product-visual:hover img {
-      transform: scale(1.04);
-      filter: saturate(1.03) contrast(1.02);
-    }
-
-    .product-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.18));
-      pointer-events: none;
-    }
-
-    .zoom-hint {
-      position: absolute;
-      right: 18px;
-      bottom: 18px;
-      background: rgba(30,30,30,.72);
-      color: #fff;
-      font-size: .83rem;
-      padding: 10px 14px;
-      border-radius: 999px;
-      letter-spacing: .02em;
-      backdrop-filter: blur(5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,.2);
-    }
-
-    .product-content {
-      padding: 36px 36px 36px 8px;
-    }
-
-    .product-tag {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(183,134,75,.12);
-      color: var(--accent-dark);
-      font-size: .82rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .product-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3.2vw, 3rem);
-      line-height: 1;
-      margin-bottom: 14px;
-      color: #252525;
-      font-weight: 600;
-    }
-
-    .product-description {
-      color: #454545;
-      font-size: 1rem;
-      line-height: 1.9;
-      margin-bottom: 22px;
-    }
-
-    .product-list {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-
-    .product-list li {
-      position: relative;
-      padding-left: 18px;
-      color: #4d4d4d;
-      line-height: 1.7;
-      font-size: .97rem;
-    }
-
-    .product-list li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: .72em;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      transform: translateY(-50%);
-    }
-
-    .product-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 180px;
-      padding: 14px 22px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      font-size: .96rem;
-      font-weight: 600;
-      transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(0,0,0,.12);
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-dark);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: #333;
-      border-color: rgba(0,0,0,.15);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,.62);
-    }
-
-    /* LIGHTBOX */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      background: rgba(10,10,10,.92);
-      padding: 30px;
-    }
-
-    .lightbox.active {
-      display: flex;
-    }
-
-    .lightbox-inner {
-      position: relative;
-      width: min(1100px, 95vw);
-      height: min(84vh, 760px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lightbox-image {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      border-radius: 10px;
-      box-shadow: 0 18px 48px rgba(0,0,0,.45);
-    }
-
-    .lightbox-btn,
-    .lightbox-close {
-      position: absolute;
-      border: none;
-      cursor: pointer;
-      background: rgba(255,255,255,.12);
-      color: #fff;
-      backdrop-filter: blur(5px);
-      transition: background .2s ease, transform .2s ease;
-    }
-
-    .lightbox-btn:hover,
-    .lightbox-close:hover {
-      background: rgba(255,255,255,.2);
-      transform: scale(1.04);
-    }
-
-    .lightbox-close {
-      top: 18px;
-      right: 18px;
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      font-size: 1.4rem;
-      line-height: 1;
-    }
-
-    .lightbox-btn {
-      top: 50%;
-      transform: translateY(-50%);
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      font-size: 1.6rem;
-      line-height: 1;
-    }
-
-    .lightbox-btn.prev {
-      left: 18px;
-    }
-
-    .lightbox-btn.next {
-      right: 18px;
-    }
-
-    .lightbox-counter {
-      position: absolute;
-      left: 50%;
-      bottom: 18px;
-      transform: translateX(-50%);
-      color: rgba(255,255,255,.92);
-      font-size: .92rem;
-      letter-spacing: .04em;
-      background: rgba(255,255,255,.09);
-      padding: 9px 14px;
-      border-radius: 999px;
-      backdrop-filter: blur(5px);
-    }
-
-    /* FOOTER */
-    .ap-footer {
-      position: relative;
-      z-index: 2;
-      background: linear-gradient(180deg, #2d2d2f 0%, #242426 100%);
-      color: rgba(255,255,255,.88);
-      margin-top: 24px;
-    }
-
-    .ap-footer-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 28px 24px;
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .ap-footer p {
-      font-size: .95rem;
-      line-height: 1.7;
-    }
-
-    .ap-footer-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .ap-footer-links a {
-      opacity: .92;
-      transition: opacity .2s ease;
-    }
-
-    .ap-footer-links a:hover {
-      opacity: 1;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1100px) {
-      .product-card,
-      .product-card.reverse {
-        grid-template-columns: 1fr;
-      }
-
-      .product-card.reverse .product-visual,
-      .product-card.reverse .product-content,
-      .product-card .product-visual,
-      .product-card .product-content {
-        order: initial;
-      }
-
-      .product-content {
-        padding: 30px;
-      }
-
-      .product-visual {
-        min-height: 360px;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .ap-header-inner {
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: center;
-        min-height: auto;
-        padding: 16px 18px 14px;
-        gap: 16px;
-      }
-
-      .ap-brand {
-        justify-content: center;
-      }
-
-      .ap-divider {
-        display: none;
-      }
-
-      .ap-brand-name {
-        white-space: normal;
-        text-align: center;
-        line-height: 1.12;
-      }
-
-      .ap-nav {
-        justify-content: center;
-        gap: 24px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .products-hero {
-        padding: 28px 16px 22px;
-      }
-
-      .products-hero-box {
-        padding: 28px 22px;
-        border-radius: 22px;
-      }
-
-      .products-section {
-        padding: 16px 16px 60px;
-      }
-
-      .product-card {
-        margin-bottom: 34px;
-        border-radius: 20px;
-      }
-
-      .product-visual {
-        min-height: 280px;
-      }
-
-      .product-content {
-        padding: 24px 20px 26px;
-      }
-
-      .product-description {
-        line-height: 1.75;
-      }
-
-      .btn {
-        width: 100%;
-        min-width: unset;
-      }
-
-      .lightbox {
-        padding: 18px;
-      }
-
-      .lightbox-btn {
-        width: 46px;
-        height: 46px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .ap-logo {
-        width: 54px;
-        height: 54px;
-      }
-
-      .ap-nav {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px 16px;
-        text-align: center;
-      }
-
-      .ap-nav a {
-        padding: 8px 0;
-      }
-
-      .product-visual {
-        min-height: 240px;
-      }
-
-      .zoom-hint {
-        right: 12px;
-        bottom: 12px;
-        font-size: .76rem;
-        padding: 8px 12px;
-      }
-
-      .product-actions {
-        gap: 10px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Productos prefabricados de hormigón en Ambato | Arquitectura y Prefabricados</title>
+
+<meta name="description" content="Productos prefabricados de hormigón en Ambato: cerramientos, postes, lavaderos, bloques decorativos, bancas, bordillos, losetas, asaderos y mobiliario exterior.">
+
+<meta name="author" content="Arquitectura y Prefabricados">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://arquitecturayprefabricados.github.io/mipagina/productos.html">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_EC">
+<meta property="og:site_name" content="Arquitectura y Prefabricados">
+<meta property="og:title" content="Productos | Arquitectura y Prefabricados">
+<meta property="og:description" content="Conoce nuestros productos prefabricados de hormigón para viviendas, cerramientos y espacios exteriores.">
+<meta property="og:url" content="https://arquitecturayprefabricados.github.io/mipagina/productos.html">
+<meta property="og:image" content="https://arquitecturayprefabricados.github.io/mipagina/images/cerramientos.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ======================================
+   BASE GENERAL
+====================================== */
+
+:root {
+  --carbon: #303030;
+  --ink: #292b2c;
+  --gray: #666967;
+  --concrete: #eeece7;
+  --concrete-dark: #dcdad5;
+  --gold: #b28b59;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.ap-products {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--ink);
+  background: var(--concrete);
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* ======================================
+   ENCABEZADO IGUAL AL INICIO
+====================================== */
+
+.ap-products .ap-header {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  background: #303030;
+  color: white;
+}
+
+.ap-products .ap-header-inner {
+  width: 100%;
+  max-width: 1920px;
+  min-height: 116px;
+  margin: 0 auto;
+  padding: 14px 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(14px, 1.5vw, 30px);
+}
+
+.ap-products .ap-brand {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  flex: 0 1 auto;
+  min-width: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.ap-products .ap-logo {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: .68;
+  filter: grayscale(100%) invert(1) contrast(1.8);
+  mix-blend-mode: screen;
+  transition: opacity .25s ease;
+}
+
+.ap-products .ap-brand:hover .ap-logo {
+  opacity: .88;
+}
+
+.ap-products .ap-brand-name {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.35rem, 2.15vw, 2.65rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: .015em;
+  color: white;
+  white-space: nowrap;
+}
+
+.ap-products .ap-header-divider {
+  width: 4px;
+  height: 78px;
+  flex: 0 0 4px;
+  background: rgba(255,255,255,.30);
+  border-radius: 3px;
+}
+
+.ap-products .ap-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  gap: clamp(16px, 2.2vw, 42px);
+  margin-left: auto;
+}
+
+.ap-products .ap-nav a {
+  display: inline-block;
+  padding: 10px 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+
+.ap-products .ap-nav a:hover,
+.ap-products .ap-nav a:focus-visible {
+  color: #e7c79c;
+}
+
+/* ======================================
+   FONDO TEXTURA HORMIGÓN
+====================================== */
+
+.ap-products .products-main {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-bottom: 70px;
+  background:
+    radial-gradient(
+      ellipse at 18% 12%,
+      rgba(255,255,255,.70),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 83% 58%,
+      rgba(145,142,135,.09),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #f0efec 0%,
+      #e5e3de 55%,
+      #edebe7 100%
+    );
+}
+
+.ap-products .products-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .23;
+  background-image:
+    radial-gradient(
+      rgba(56,54,50,.22) .65px,
+      transparent .85px
+    ),
+    radial-gradient(
+      rgba(255,255,255,.80) .8px,
+      transparent 1px
+    );
+  background-size: 23px 23px, 31px 31px;
+  background-position: 0 0, 11px 13px;
+}
+
+/* ======================================
+   INTRODUCCIÓN DEL CATÁLOGO
+====================================== */
+
+.ap-products .products-intro {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 75px 28px 48px;
+}
+
+.ap-products .eyebrow {
+  display: block;
+  margin-bottom: 16px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: #917044;
+}
+
+.ap-products .products-intro h1 {
+  max-width: 800px;
+  margin: 0;
+  color: #2c2c2c;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(3.2rem, 6vw, 5.7rem);
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+.ap-products .intro-divider {
+  width: 84px;
+  height: 2px;
+  margin: 24px 0;
+  background: var(--gold);
+}
+
+.ap-products .products-intro p {
+  max-width: 760px;
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+.ap-products .intro-note {
+  display: inline-block;
+  margin-top: 23px;
+  font-size: .78rem;
+  letter-spacing: .04em;
+  color: #777;
+}
+
+/* ======================================
+   CONTENEDOR DE PRODUCTOS
+====================================== */
+
+.ap-products .catalog {
+  width: min(1250px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+/* ======================================
+   FICHAS ALTERNADAS
+====================================== */
+
+.ap-products .product-card {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  align-items: center;
+  gap: clamp(28px, 4vw, 64px);
+  padding: 34px 0;
+  margin-bottom: 34px;
+  border-bottom: 1px solid rgba(75,75,75,.13);
+}
+
+.ap-products .product-card:nth-of-type(even) {
+  grid-template-columns: .92fr 1.08fr;
+}
+
+.ap-products .product-card:nth-of-type(even) .product-visual {
+  order: 2;
+}
+
+.ap-products .product-card:nth-of-type(even) .product-content {
+  order: 1;
+}
+
+/* ======================================
+   IMAGEN UNIFORME 4:3
+====================================== */
+
+.ap-products .product-visual {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 6px;
+  cursor: zoom-in;
+  background: #dedcd6;
+  box-shadow: 0 14px 32px rgba(38,38,38,.10);
+  text-align: center;
+}
+
+.ap-products .product-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform .45s ease;
+}
+
+.ap-products .product-visual:hover img {
+  transform: scale(1.025);
+}
+
+.ap-products .product-visual:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.ap-products .image-hint {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  color: white;
+  background: rgba(25,25,25,.72);
+  border-radius: 4px;
+  font-size: .76rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  backdrop-filter: blur(5px);
+}
+
+/* ======================================
+   DESCRIPCIONES
+====================================== */
+
+.ap-products .product-content {
+  padding: 12px 0;
+}
+
+.ap-products .product-number {
+  display: block;
+  margin-bottom: 13px;
+  color: #93744c;
+  font-size: .75rem;
+  letter-spacing: .20em;
+  font-weight: 600;
+}
+
+.ap-products .product-name {
+  margin: 0 0 17px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #292929;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.ap-products .product-description {
+  margin: 0 0 20px;
+  color: #555;
+  font-size: .94rem;
+  line-height: 1.95;
+}
+
+.ap-products .product-features {
+  list-style: none;
+  margin: 0 0 23px;
+  padding: 0;
+}
+
+.ap-products .product-features li {
+  position: relative;
+  padding: 5px 0 5px 18px;
+  font-size: .84rem;
+  color: #626262;
+  line-height: 1.65;
+}
+
+.ap-products .product-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 6px;
+  height: 6px;
+  background: #a9885c;
+  transform: rotate(45deg);
+}
+
+.ap-products .quote-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 43px;
+  padding: 12px 17px;
+  border: 1px solid #a88b63;
+  border-radius: 3px;
+  color: #59452b;
+  text-decoration: none;
+  font-size: .82rem;
+  font-weight: 600;
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.ap-products .quote-link:hover {
+  background: #a88b63;
+  color: white;
+}
+
+.ap-products .quote-link::after {
+  content: "↗";
+  font-size: 1rem;
+}
+
+/* ======================================
+   GALERÍA A PANTALLA COMPLETA
+====================================== */
+
+.ap-products.gallery-open {
+  overflow: hidden;
+}
+
+.ap-products .lightbox[hidden] {
+  display: none !important;
+}
+
+.ap-products .lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6,6,6,.97);
+}
+
+.ap-products .lightbox-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 62px;
+}
+
+.ap-products .lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: 94vh;
+  max-height: 94dvh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.ap-products .lightbox-control {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 50%;
+  background: rgba(35,35,35,.55);
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.ap-products .lightbox-control:hover {
+  background: rgba(90,90,90,.65);
+}
+
+.ap-products .lightbox-control:focus-visible {
+  outline: 2px solid #e5c79f;
+  outline-offset: 3px;
+}
+
+.ap-products .lightbox-close {
+  top: 20px;
+  right: 20px;
+}
+
+.ap-products .lightbox-prev {
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+}
+
+.ap-products .lightbox-next {
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+}
+
+/* ======================================
+   PIE DE PÁGINA
+====================================== */
+
+.ap-products .ap-footer {
+  background: #292929;
+  color: #eee;
+  padding: 23px 18px;
+  text-align: center;
+}
+
+.ap-products .ap-footer p {
+  color: #eee;
+  font-size: .8rem;
+  margin: 0 0 12px;
+}
+
+.ap-products .ap-footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ap-products .ap-footer-links a {
+  color: #f0d3ae;
+  font-size: .8rem;
+  text-decoration: none;
+}
+
+/* ======================================
+   TABLETAS Y PANTALLAS INTERMEDIAS
+====================================== */
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+  .ap-products .ap-header-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 25px;
+  }
+
+  .ap-products .ap-brand-name {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+  }
+
+  .ap-products .ap-header-divider {
+    display: none;
+  }
+
+  .ap-products .ap-nav {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .ap-products .ap-nav a {
+    font-size: 1.15rem;
+  }
+}
+
+/* ======================================
+   CELULARES
+====================================== */
+
+@media (max-width: 768px) {
+
+  /* ENCABEZADO IDÉNTICO AL INICIO */
+
+  .ap-products .ap-header-inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 12px 10px;
+    min-height: auto;
+  }
+
+  .ap-products .ap-brand {
+    width: 100%;
+    justify-content: center;
+    gap: 11px;
+  }
+
+  .ap-products .ap-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .ap-products .ap-brand-name {
+    font-size: clamp(.95rem, 3.5vw, 1.4rem);
+    line-height: 1.2;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .ap-products .ap-header-divider {
+    display: none;
+  }
+
+  .ap-products .ap-nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    width: 100%;
+    gap: 4px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .ap-products .ap-nav a {
+    font-size: clamp(.72rem, 2.6vw, .9rem);
+    padding: 10px 2px;
+  }
+
+  /* INTRODUCCIÓN */
+
+  .ap-products .products-intro {
+    padding: 45px 20px 28px;
+  }
+
+  .ap-products .products-intro h1 {
+    font-size: clamp(2.9rem, 11vw, 4.1rem);
+  }
+
+  .ap-products .products-intro p {
+    font-size: .9rem;
+    line-height: 1.85;
+  }
+
+  /* PRODUCTOS UNO DEBAJO DEL OTRO */
+
+  .ap-products .catalog {
+    width: calc(100% - 36px);
+  }
+
+  .ap-products .product-card,
+  .ap-products .product-card:nth-of-type(even) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 22px 0 30px;
+    margin-bottom: 17px;
+  }
+
+  .ap-products .product-card .product-visual,
+  .ap-products .product-card:nth-of-type(even) .product-visual {
+    order: 0;
+  }
+
+  .ap-products .product-card .product-content,
+  .ap-products .product-card:nth-of-type(even) .product-content {
+    order: 1;
+  }
+
+  .ap-products .product-visual {
+    aspect-ratio: 4 / 3;
+  }
+
+  .ap-products .product-content {
+    padding: 0 5px;
+  }
+
+  .ap-products .product-name {
+    font-size: clamp(2.65rem, 10vw, 3.5rem);
+    margin-bottom: 12px;
+  }
+
+  .ap-products .product-description {
+    font-size: .9rem;
+    line-height: 1.85;
+  }
+
+  .ap-products .product-features li {
+    font-size: .83rem;
+  }
+
+  /* GALERÍA MÓVIL */
+
+  .ap-products .lightbox-stage {
+    padding: 12px 8px;
+  }
+
+  .ap-products .lightbox-image {
+    max-width: 100%;
+    max-height: 91dvh;
+  }
+
+  .ap-products .lightbox-control {
+    width: 38px;
+    height: 38px;
+    background: rgba(20,20,20,.60);
+  }
+
+  .ap-products .lightbox-close {
+    top: 15px;
+    right: 15px;
+  }
+
+  .ap-products .lightbox-prev {
+    left: 9px;
+  }
+
+  .ap-products .lightbox-next {
+    right: 9px;
+  }
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 380px) {
+
+  .ap-products .ap-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .ap-products .ap-brand-name {
+    font-size: .95rem;
+  }
+
+  .ap-products .image-hint {
+    font-size: .7rem;
+    padding: 8px 10px;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ap-products *,
+  .ap-products *::before,
+  .ap-products *::after {
+    transition: none !important;
+  }
+}
+</style>
 </head>
 
-<body>
+<body class="ap-products">
 
-  <!-- HEADER -->
-  <header class="ap-header">
-    <div class="ap-header-inner">
-      <div class="ap-brand">
-        <a href="index.html" class="ap-logo-link" aria-label="Ir a inicio">
-          <img src="images/logo.png" alt="Logo Arquitectura y Prefabricados" class="ap-logo" />
-        </a>
+<!-- ======================================
+     ENCABEZADO
+====================================== -->
 
-        <div class="ap-brand-name">
-          ARQUITECTURA Y PREFABRICADOS
-        </div>
+<header class="ap-header">
 
-        <div class="ap-divider" aria-hidden="true"></div>
-      </div>
+  <div class="ap-header-inner">
 
-      <nav class="ap-nav" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
-        <a href="productos.html" class="ap-active">Productos</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
+    <a class="ap-brand"
+       href="index.html"
+       aria-label="Arquitectura y Prefabricados - Inicio">
 
-  <!-- HERO -->
-  <section class="products-hero">
-    <div class="products-hero-box">
-      <span class="products-kicker">Productos prefabricados de hormigón</span>
-      <h1 class="products-title">Soluciones resistentes, funcionales y con identidad propia</h1>
-      <p class="products-subtitle">
-        En <strong>Arquitectura y Prefabricados</strong> fabricamos productos en hormigón pensados
-        para aportar durabilidad, orden y una mejor imagen a cada proyecto.
-        Presentamos una selección de productos elaborados con enfoque práctico,
-        resistencia y acabados que se adaptan a distintos usos residenciales y constructivos.
-      </p>
-    </div>
-  </section>
+      <img
+        src="images/logo.png"
+        alt="Logotipo de Arquitectura y Prefabricados"
+        class="ap-logo"
+        width="76"
+        height="76">
 
-  <!-- PRODUCTOS -->
-  <main class="products-section">
+      <span class="ap-brand-name">
+        ARQUITECTURA Y PREFABRICADOS
+      </span>
+    </a>
 
-    <!-- 1 -->
-    <article class="product-card">
-      <div
-        class="product-visual js-gallery"
-        data-gallery='[
-          "images/cerramientos.jpg",
-          "images/cerra1.jpg",
-          "images/cerra2.jpg",
-          "images/cerra3.jpg"
-        ]'
-        aria-label="Abrir galería de cerramientos"
-        tabindex="0"
-        role="button"
-      >
-       <div class="product-overlay"></div>
-    <div class="zoom-hint">Ver galería</div>
+    <div class="ap-header-divider"
+         aria-hidden="true"></div>
+
+    <nav class="ap-nav"
+         aria-label="Navegación principal">
+
+      <a href="index.html">Inicio</a>
+      <a href="productos.html" aria-current="page">Productos</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+
+    </nav>
+
   </div>
 
-  <div class="product-content">
-    <span class="product-tag">Hormigón prefabricado</span>
-    <h2 class="product-name">Cerramientos</h2>
+</header>
 
-    <p class="product-description">
-      Sistemas prefabricados para delimitar, proteger y dar presencia a lotes,
-      viviendas y espacios exteriores. Su principal ventaja es combinar
-      resistencia estructural, rapidez de ejecución y una imagen limpia.
+<!-- ======================================
+     CONTENIDO PRINCIPAL
+====================================== -->
+
+<main class="products-main">
+
+  <!-- INTRODUCCIÓN -->
+
+  <section class="products-intro">
+
+    <span class="eyebrow">
+      ARQUITECTURA Y PREFABRICADOS
+    </span>
+
+    <h1>El hormigón como expresión de diseño y funcionalidad</h1>
+
+    <div class="intro-divider"></div>
+
+    <p>
+      Fabricamos productos prefabricados de hormigón
+      para viviendas, cerramientos, espacios exteriores
+      y diferentes aplicaciones constructivas.
+      Cada producto responde a necesidades de uso,
+      funcionalidad e integración con su entorno.
     </p>
 
-    <ul class="product-list">
-      <li>Solución práctica para cerramiento perimetral.</li>
-      <li>Buena durabilidad y bajo mantenimiento.</li>
-      <li>Acabado uniforme y apariencia ordenada.</li>
-      <li>Instalación eficiente en obra.</li>
-    </ul>
-  </div>
+    <span class="intro-note">
+      Seleccione una fotografía para visualizarla en pantalla completa.
+    </span>
 
-</article>
+  </section>
 
-    <!-- 2 -->
-    <article class="product-card reverse">
-      <div
+  <!-- ====================================
+       CATÁLOGO
+  ===================================== -->
+
+  <div class="catalog">
+
+    <!-- 01 CERRAMIENTOS -->
+
+    <article class="product-card" id="cerramientos">
+
+      <button
+        type="button"
         class="product-visual js-gallery"
         data-gallery='[
-          "images/productos/lavaderos/lavadero1.jpg",
-          "images/productos/lavaderos/lavadero2.jpg",
-          "images/productos/lavaderos/lavadero3.jpg"
+          "images/cerra1.jpeg",
+          "images/cerra2.jpeg",
+          "images/cerra3.jpeg"
         ]'
-        aria-label="Abrir galería de lavaderos"
-        tabindex="0"
-      >
-        <img src="images/productos/lavaderos/lavadero1.jpg" alt="Lavaderos prefabricados de hormigón" />
-        <div class="product-overlay"></div>
-        <div class="zoom-hint">Ver galería</div>
-      </div>
+        aria-label="Ver fotografías de cerramientos">
+
+        <img
+          src="images/cerramientos.jpg"
+          alt="Cerramientos prefabricados de hormigón"
+          loading="lazy">
+
+        <span class="image-hint">
+          Ampliar fotografías ↗
+        </span>
+
+      </button>
 
       <div class="product-content">
-        <span class="product-tag">Uso residencial</span>
+
+        <span class="product-number">01 / HORMIGÓN PREFABRICADO</span>
+
+        <h2 class="product-name">Cerramientos</h2>
+
+        <p class="product-description">
+          Sistemas de cerramiento prefabricado para
+          delimitar propiedades y espacios exteriores.
+          Los paneles de hormigón permiten incorporar
+          diferentes diseños y texturas, proporcionando
+          una solución funcional y una imagen ordenada.
+        </p>
+
+        <ul class="product-features">
+          <li>Paneles con diferentes acabados.</li>
+          <li>Aplicaciones residenciales y perimetrales.</li>
+          <li>Diseños lisos, tipo ladrillo y horizontales.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20una%20cotizacion%20de%20cerramientos%20prefabricados."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar cotización
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- 02 LAVADEROS -->
+
+    <article class="product-card" id="lavaderos">
+
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/lavanderias.jpg"]'
+        aria-label="Ver fotografía de lavaderos">
+
+        <img
+          src="images/lavanderias.jpg"
+          alt="Lavaderos prefabricados de hormigón"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">02 / EQUIPAMIENTO RESIDENCIAL</span>
+
         <h2 class="product-name">Lavaderos</h2>
+
         <p class="product-description">
-          Lavaderos prefabricados diseñados para brindar funcionalidad, resistencia y larga vida útil en áreas de servicio.
-          Son una opción práctica para viviendas, patios y espacios de lavandería.
+          Lavaderos prefabricados de hormigón
+          diseñados para áreas de servicio,
+          patios y lavanderías. Una alternativa
+          funcional para espacios que requieren
+          superficies resistentes al uso cotidiano.
         </p>
 
-        <ul class="product-list">
-          <li>Estructura firme y resistente al uso continuo.</li>
-          <li>Fácil limpieza y mantenimiento.</li>
-          <li>Diseño funcional para el hogar.</li>
-          <li>Ideal para espacios de servicio y patio.</li>
+        <ul class="product-features">
+          <li>Aplicación en viviendas y áreas de servicio.</li>
+          <li>Fabricación en hormigón.</li>
+          <li>Diseños funcionales para diferentes espacios.</li>
         </ul>
 
-        <div class="product-actions">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/593992941294?text=Hola,%20deseo%20información%20sobre%20lavaderos%20prefabricados."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Solicitar cotización
-          </a>
-          <a class="btn btn-secondary" href="contacto.html">Más información</a>
-        </div>
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20lavaderos%20prefabricados."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
       </div>
+
     </article>
 
-    <!-- 3 -->
-    <article class="product-card">
-      <div
+    <!-- 03 ASADEROS -->
+
+    <article class="product-card" id="asaderos">
+
+      <button
+        type="button"
         class="product-visual js-gallery"
-        data-gallery='[
-          "images/productos/bloques/bloque1.jpg",
-          "images/productos/bloques/bloque2.jpg",
-          "images/productos/bloques/bloque3.jpg"
-        ]'
-        aria-label="Abrir galería de bloques decorativos"
-        tabindex="0"
-      >
-        <img src="images/productos/bloques/bloque1.jpg" alt="Bloques decorativos de hormigón" />
-        <div class="product-overlay"></div>
-        <div class="zoom-hint">Ver galería</div>
-      </div>
+        data-gallery='["images/asaderos.jpg"]'
+        aria-label="Ver fotografía de asaderos">
+
+        <img
+          src="images/asaderos.jpg"
+          alt="Asaderos prefabricados para exteriores"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
 
       <div class="product-content">
-        <span class="product-tag">Diseño arquitectónico</span>
-        <h2 class="product-name">Bloques decorativos</h2>
-        <p class="product-description">
-          Elementos prefabricados pensados para dar textura, ventilación e identidad visual a fachadas, divisiones y ambientes exteriores.
-          Aportan valor estético sin dejar de ser funcionales.
-        </p>
 
-        <ul class="product-list">
-          <li>Ideales para fachadas y divisiones.</li>
-          <li>Aportan luz, ventilación y expresión arquitectónica.</li>
-          <li>Diferentes composiciones y aplicaciones.</li>
-          <li>Excelente complemento visual para proyectos modernos.</li>
-        </ul>
+        <span class="product-number">03 / ESPACIOS EXTERIORES</span>
 
-        <div class="product-actions">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/593992941294?text=Hola,%20deseo%20información%20sobre%20bloques%20decorativos."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Solicitar cotización
-          </a>
-          <a class="btn btn-secondary" href="contacto.html">Más información</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 4 -->
-    <article class="product-card reverse">
-      <div
-        class="product-visual js-gallery"
-        data-gallery='[
-          "images/productos/postes/poste1.jpg",
-          "images/productos/postes/poste2.jpg",
-          "images/productos/postes/poste3.jpg"
-        ]'
-        aria-label="Abrir galería de postes para cercas"
-        tabindex="0"
-      >
-        <img src="images/productos/postes/poste1.jpg" alt="Postes de hormigón para cercas" />
-        <div class="product-overlay"></div>
-        <div class="zoom-hint">Ver galería</div>
-      </div>
-
-      <div class="product-content">
-        <span class="product-tag">Aplicación perimetral</span>
-        <h2 class="product-name">Postes para cercas</h2>
-        <p class="product-description">
-          Postes prefabricados en hormigón para sistemas de delimitación y cercado.
-          Ofrecen firmeza, durabilidad y una respuesta confiable para uso residencial o de campo.
-        </p>
-
-        <ul class="product-list">
-          <li>Buena resistencia y estabilidad.</li>
-          <li>Adecuados para cercas y divisiones de terreno.</li>
-          <li>Menor mantenimiento que alternativas livianas.</li>
-          <li>Fabricación sólida y funcional.</li>
-        </ul>
-
-        <div class="product-actions">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/593992941294?text=Hola,%20deseo%20información%20sobre%20postes%20para%20cercas."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Solicitar cotización
-          </a>
-          <a class="btn btn-secondary" href="contacto.html">Más información</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 5 -->
-    <article class="product-card">
-      <div
-        class="product-visual js-gallery"
-        data-gallery='[
-          "images/productos/bancas/banca1.jpg",
-          "images/productos/bancas/banca2.jpg",
-          "images/productos/bancas/banca3.jpg"
-        ]'
-        aria-label="Abrir galería de bancas"
-        tabindex="0"
-      >
-        <img src="images/productos/bancas/banca1.jpg" alt="Bancas prefabricadas de hormigón" />
-        <div class="product-overlay"></div>
-        <div class="zoom-hint">Ver galería</div>
-      </div>
-
-      <div class="product-content">
-        <span class="product-tag">Mobiliario exterior</span>
-        <h2 class="product-name">Bancas</h2>
-        <p class="product-description">
-          Bancas prefabricadas pensadas para áreas exteriores, jardines, patios y espacios recreativos.
-          Combinan resistencia, funcionalidad y una presencia sobria y duradera.
-        </p>
-
-        <ul class="product-list">
-          <li>Excelentes para exteriores y zonas comunes.</li>
-          <li>Resistentes al clima y al uso frecuente.</li>
-          <li>Aportan orden y funcionalidad.</li>
-          <li>Ideales para jardines, parques y patios.</li>
-        </ul>
-
-        <div class="product-actions">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/593992941294?text=Hola,%20deseo%20información%20sobre%20bancas%20prefabricadas."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Solicitar cotización
-          </a>
-          <a class="btn btn-secondary" href="contacto.html">Más información</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 6 -->
-    <article class="product-card reverse">
-      <div
-        class="product-visual js-gallery"
-        data-gallery='[
-          "images/productos/jardineras/jardinera1.jpg",
-          "images/productos/jardineras/jardinera2.jpg",
-          "images/productos/jardineras/jardinera3.jpg"
-        ]'
-        aria-label="Abrir galería de jardineras"
-        tabindex="0"
-      >
-        <img src="images/productos/jardineras/jardinera1.jpg" alt="Jardineras prefabricadas de hormigón" />
-        <div class="product-overlay"></div>
-        <div class="zoom-hint">Ver galería</div>
-      </div>
-
-      <div class="product-content">
-        <span class="product-tag">Paisajismo</span>
-        <h2 class="product-name">Jardineras</h2>
-        <p class="product-description">
-          Jardineras prefabricadas para complementar espacios exteriores con orden, permanencia y una estética sobria.
-          Funcionan muy bien en viviendas, veredas y áreas decorativas.
-        </p>
-
-        <ul class="product-list">
-          <li>Complemento ideal para jardines y fachadas.</li>
-          <li>Resistentes y de mantenimiento simple.</li>
-          <li>Ayudan a organizar y jerarquizar espacios.</li>
-          <li>Buena presencia visual en proyectos residenciales.</li>
-        </ul>
-
-        <div class="product-actions">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/593992941294?text=Hola,%20deseo%20información%20sobre%20jardineras%20prefabricadas."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Solicitar cotización
-          </a>
-          <a class="btn btn-secondary" href="contacto.html">Más información</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 7 -->
-    <article class="product-card">
-      <div
-        class="product-visual js-gallery"
-        data-gallery='[
-          "images/productos/mesas/mesa1.jpg",
-          "images/productos/mesas/mesa2.jpg",
-          "images/productos/mesas/mesa3.jpg"
-        ]'
-        aria-label="Abrir galería de mesas"
-        tabindex="0"
-      >
-        <img src="images/productos/mesas/mesa1.jpg" alt="Mesas prefabricadas de hormigón" />
-        <div class="product-overlay"></div>
-        <div class="zoom-hint">Ver galería</div>
-      </div>
-
-      <div class="product-content">
-        <span class="product-tag">Mobiliario duradero</span>
-        <h2 class="product-name">Mesas</h2>
-        <p class="product-description">
-          Mesas prefabricadas de hormigón para exteriores y espacios de reunión.
-          Son una alternativa duradera y estable para ambientes donde se necesita resistencia y poca intervención posterior.
-        </p>
-
-        <ul class="product-list">
-          <li>Útiles para patios, jardines y áreas sociales.</li>
-          <li>Gran estabilidad y larga vida útil.</li>
-          <li>Material noble para uso exterior.</li>
-          <li>Diseño práctico y funcional.</li>
-        </ul>
-
-        <div class="product-actions">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/593992941294?text=Hola,%20deseo%20información%20sobre%20mesas%20prefabricadas."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Solicitar cotización
-          </a>
-          <a class="btn btn-secondary" href="contacto.html">Más información</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 8 -->
-    <article class="product-card reverse">
-      <div
-        class="product-visual js-gallery"
-        data-gallery='[
-          "images/productos/asaderos/asadero1.jpg",
-          "images/productos/asaderos/asadero2.jpg",
-          "images/productos/asaderos/asadero3.jpg"
-        ]'
-        aria-label="Abrir galería de asaderos"
-        tabindex="0"
-      >
-        <img src="images/productos/asaderos/asadero1.jpg" alt="Asaderos prefabricados de hormigón" />
-        <div class="product-overlay"></div>
-        <div class="zoom-hint">Ver galería</div>
-      </div>
-
-      <div class="product-content">
-        <span class="product-tag">Uso exterior</span>
         <h2 class="product-name">Asaderos</h2>
+
         <p class="product-description">
-          Asaderos prefabricados pensados para complementar patios y áreas de reunión.
-          Aportan practicidad, presencia y una solución sólida para espacios sociales en exteriores.
+          Elementos prefabricados para complementar
+          patios, jardines y zonas sociales.
+          Su diseño busca integrar el área de
+          preparación de alimentos con los espacios
+          de reunión al aire libre.
         </p>
 
-        <ul class="product-list">
-          <li>Ideales para patios y zonas sociales.</li>
-          <li>Estructura resistente y funcional.</li>
-          <li>Buena integración en proyectos residenciales.</li>
-          <li>Diseño práctico con materiales durables.</li>
+        <ul class="product-features">
+          <li>Aplicación en patios y jardines.</li>
+          <li>Elementos prefabricados en hormigón.</li>
+          <li>Integración con espacios sociales exteriores.</li>
         </ul>
 
-        <div class="product-actions">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/593992941294?text=Hola,%20deseo%20información%20sobre%20asaderos%20prefabricados."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Solicitar cotización
-          </a>
-          <a class="btn btn-secondary" href="contacto.html">Más información</a>
-        </div>
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20asaderos%20prefabricados."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
       </div>
+
     </article>
 
-  </main>
+    <!-- 04 POSTES -->
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar galería">&times;</button>
-    <button class="lightbox-btn prev" id="lightboxPrev" aria-label="Imagen anterior">&#10094;</button>
+    <article class="product-card" id="postes">
 
-    <div class="lightbox-inner">
-      <img src="" alt="Galería de producto" class="lightbox-image" id="lightboxImage" />
-      <div class="lightbox-counter" id="lightboxCounter">1 / 3</div>
-    </div>
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/posts.jpg"]'
+        aria-label="Ver fotografía de postes para cercas">
 
-    <button class="lightbox-btn next" id="lightboxNext" aria-label="Imagen siguiente">&#10095;</button>
+        <img
+          src="images/posts.jpg"
+          alt="Postes prefabricados para cercas"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">04 / CERRAMIENTOS Y CERCAS</span>
+
+        <h2 class="product-name">Postes para cercas</h2>
+
+        <p class="product-description">
+          Postes prefabricados de hormigón
+          para delimitar propiedades mediante
+          sistemas de cercado. Constituyen
+          elementos de soporte para diferentes
+          aplicaciones perimetrales.
+        </p>
+
+        <ul class="product-features">
+          <li>Utilización en cercas y divisiones.</li>
+          <li>Elementos de hormigón prefabricado.</li>
+          <li>Aplicaciones en terrenos y propiedades.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20postes%20para%20cercas."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- 05 LOSETAS -->
+
+    <article class="product-card" id="losetas">
+
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/losetas.jpg"]'
+        aria-label="Ver fotografía de losetas">
+
+        <img
+          src="images/losetas.jpg"
+          alt="Losetas prefabricadas para pisos"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">05 / PAVIMENTOS</span>
+
+        <h2 class="product-name">Losetas de piso</h2>
+
+        <p class="product-description">
+          Elementos prefabricados de hormigón
+          destinados a superficies de circulación
+          y espacios exteriores. Permiten desarrollar
+          composiciones de piso con diferentes
+          aplicaciones arquitectónicas.
+        </p>
+
+        <ul class="product-features">
+          <li>Aplicaciones en patios y senderos.</li>
+          <li>Elementos modulares de hormigón.</li>
+          <li>Alternativa para pavimentos exteriores.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20losetas%20prefabricadas."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- 06 BANCAS -->
+
+    <article class="product-card" id="bancas">
+
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/bancas.jpg"]'
+        aria-label="Ver fotografía de bancas">
+
+        <img
+          src="images/bancas.jpg"
+          alt="Bancas de hormigón para exteriores"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">06 / MOBILIARIO EXTERIOR</span>
+
+        <h2 class="product-name">Bancas</h2>
+
+        <p class="product-description">
+          Bancas prefabricadas de hormigón
+          para jardines, parques, patios
+          y zonas de descanso.
+          Disponemos de diseños con y sin espaldar
+          para diferentes aplicaciones.
+        </p>
+
+        <ul class="product-features">
+          <li>Modelos con o sin espaldar.</li>
+          <li>Uso en espacios interiores o exteriores según el modelo.</li>
+          <li>Equipamiento para zonas de descanso.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20bancas%20prefabricadas."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- 07 JUEGOS DE MESAS Y JARDINERAS -->
+
+    <article class="product-card" id="mesas-jardineras">
+
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/juegos-mesas-jardineras.jpg"]'
+        aria-label="Ver fotografía de mesas y jardineras">
+
+        <img
+          src="images/juegos-mesas-jardineras.jpg"
+          alt="Juegos de mesas y jardineras prefabricadas"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">07 / MOBILIARIO Y PAISAJISMO</span>
+
+        <h2 class="product-name">Mesas y jardineras</h2>
+
+        <p class="product-description">
+          Elementos prefabricados destinados
+          a complementar jardines, patios,
+          áreas recreativas y espacios de reunión.
+          Incorporan funciones de mobiliario
+          y organización del espacio exterior.
+        </p>
+
+        <ul class="product-features">
+          <li>Aplicación en jardines y patios.</li>
+          <li>Elementos de mobiliario y decoración.</li>
+          <li>Complementos para proyectos paisajísticos.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20mesas%20y%20jardineras."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- 08 VERJAS -->
+
+    <article class="product-card" id="verjas">
+
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/verjas.jpg"]'
+        aria-label="Ver fotografía de verjas">
+
+        <img
+          src="images/verjas.jpg"
+          alt="Verjas para cerramientos"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">08 / ELEMENTOS PARA CERRAMIENTOS</span>
+
+        <h2 class="product-name">Verjas</h2>
+
+        <p class="product-description">
+          Elementos para delimitar y complementar
+          cerramientos residenciales y exteriores.
+          Su aplicación permite combinar protección,
+          diseño y expresión arquitectónica.
+        </p>
+
+        <ul class="product-features">
+          <li>Aplicación en cerramientos exteriores.</li>
+          <li>Complemento para proyectos residenciales.</li>
+          <li>Alternativas de diseño según el proyecto.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20verjas."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- 09 BORDILLOS -->
+
+    <article class="product-card" id="bordillos">
+
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/bordillos.jpg"]'
+        aria-label="Ver fotografía de bordillos">
+
+        <img
+          src="images/bordillos.jpg"
+          alt="Bordillos de hormigón prefabricado"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">09 / URBANISMO</span>
+
+        <h2 class="product-name">Bordillos</h2>
+
+        <p class="product-description">
+          Elementos prefabricados para definir
+          bordes, delimitar superficies y organizar
+          áreas de circulación. Se emplean
+          en diferentes proyectos de urbanismo,
+          jardinería y exteriores.
+        </p>
+
+        <ul class="product-features">
+          <li>Delimitación de espacios y pavimentos.</li>
+          <li>Aplicaciones urbanas y residenciales.</li>
+          <li>Elementos modulares de hormigón.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20bordillos%20prefabricados."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- 10 BLOQUES DECORATIVOS -->
+
+    <article class="product-card" id="bloques">
+
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/bloques-decorativos.jpg"]'
+        aria-label="Ver fotografía de bloques decorativos">
+
+        <img
+          src="images/bloques-decorativos.jpg"
+          alt="Bloques decorativos de hormigón"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">10 / DISEÑO ARQUITECTÓNICO</span>
+
+        <h2 class="product-name">Bloques decorativos</h2>
+
+        <p class="product-description">
+          Bloques prefabricados que incorporan
+          textura y patrones decorativos en
+          cerramientos, fachadas y divisiones.
+          Permiten integrar elementos de hormigón
+          en composiciones arquitectónicas.
+        </p>
+
+        <ul class="product-features">
+          <li>Aplicaciones en fachadas y cerramientos.</li>
+          <li>Diseños y texturas decorativas.</li>
+          <li>Integración en proyectos arquitectónicos.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20bloques%20decorativos."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- 11 VALLAS PUBLICITARIAS -->
+
+    <article class="product-card" id="vallas">
+
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/vallas-publicitarias.jpg"]'
+        aria-label="Ver fotografía de vallas publicitarias">
+
+        <img
+          src="images/vallas-publicitarias.jpg"
+          alt="Elementos para vallas publicitarias"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">11 / APLICACIONES COMERCIALES</span>
+
+        <h2 class="product-name">Vallas publicitarias</h2>
+
+        <p class="product-description">
+          Soluciones constructivas para proyectos
+          de señalización y publicidad exterior.
+          Los elementos se seleccionan según
+          las características y necesidades
+          de cada instalación.
+        </p>
+
+        <ul class="product-features">
+          <li>Aplicaciones comerciales y publicitarias.</li>
+          <li>Elementos para instalaciones exteriores.</li>
+          <li>Consulta según las necesidades del proyecto.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20vallas%20publicitarias."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- 12 SLATS PARA CHANCHERAS -->
+
+    <article class="product-card" id="slats">
+
+      <button
+        type="button"
+        class="product-visual js-gallery"
+        data-gallery='["images/slats-chancheras.jpg"]'
+        aria-label="Ver fotografía de slats para chancheras">
+
+        <img
+          src="images/slats-chancheras.jpg"
+          alt="Slats prefabricados para instalaciones porcinas"
+          loading="lazy">
+
+        <span class="image-hint">Ampliar imagen ↗</span>
+
+      </button>
+
+      <div class="product-content">
+
+        <span class="product-number">12 / APLICACIONES AGROPECUARIAS</span>
+
+        <h2 class="product-name">Slats para chancheras</h2>
+
+        <p class="product-description">
+          Elementos prefabricados de hormigón
+          destinados a pisos de instalaciones
+          porcinas. Se utilizan en sistemas
+          que requieren superficies de apoyo
+          y espacios para evacuación de residuos.
+        </p>
+
+        <ul class="product-features">
+          <li>Aplicaciones en instalaciones porcinas.</li>
+          <li>Elementos prefabricados de hormigón.</li>
+          <li>Consultar dimensiones y modelos disponibles.</li>
+        </ul>
+
+        <a class="quote-link"
+           href="https://wa.me/593992941294?text=Deseo%20informacion%20sobre%20slats%20para%20chancheras."
+           target="_blank"
+           rel="noopener noreferrer">
+          Solicitar información
+        </a>
+
+      </div>
+
+    </article>
+
   </div>
 
-  <!-- FOOTER -->
-  <footer class="ap-footer">
-    <div class="ap-footer-inner">
-      <p>
-        &copy; 2026 Arquitectura y Prefabricados. Todos los derechos reservados.
-      </p>
+</main>
 
-      <div class="ap-footer-links">
-        <a href="https://www.facebook.com/arquitecturaprefabricados" target="_blank" rel="noopener noreferrer">
-          Facebook
-        </a>
-        <a href="https://www.instagram.com/arquitecturayprefabricados" target="_blank" rel="noopener noreferrer">
-          Instagram
-        </a>
-      </div>
-    </div>
-  </footer>
+<!-- ======================================
+     GALERÍA FULLSCREEN
+====================================== -->
 
-  <script>
-    (function () {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImage = document.getElementById('lightboxImage');
-      const lightboxClose = document.getElementById('lightboxClose');
-      const lightboxPrev = document.getElementById('lightboxPrev');
-      const lightboxNext = document.getElementById('lightboxNext');
-      const lightboxCounter = document.getElementById('lightboxCounter');
+<div
+  class="lightbox"
+  id="lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Galería de fotografías del producto"
+  hidden>
 
-      const galleries = document.querySelectorAll('.js-gallery');
+  <button
+    type="button"
+    class="lightbox-control lightbox-close"
+    id="lightboxClose"
+    aria-label="Cerrar galería">
+    &times;
+  </button>
 
-      let currentGallery = [];
-      let currentIndex = 0;
+  <button
+    type="button"
+    class="lightbox-control lightbox-prev"
+    id="lightboxPrev"
+    aria-label="Fotografía anterior">
+    &#10094;
+  </button>
 
-      function updateLightbox() {
-        if (!currentGallery.length) return;
-        lightboxImage.src = currentGallery[currentIndex];
-        lightboxCounter.textContent = (currentIndex + 1) + ' / ' + currentGallery.length;
-      }
+  <div class="lightbox-stage" id="lightboxStage">
 
-      function openGallery(images, index = 0) {
-        currentGallery = images;
-        currentIndex = index;
-        updateLightbox();
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        lightbox.setAttribute('aria-hidden', 'false');
-      }
+    <img
+      id="lightboxImage"
+      class="lightbox-image"
+      alt=""
+      draggable="false">
 
-      function closeGallery() {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-        lightbox.setAttribute('aria-hidden', 'true');
-      }
+  </div>
 
-      function showPrev() {
-        if (!currentGallery.length) return;
-        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-        updateLightbox();
-      }
+  <button
+    type="button"
+    class="lightbox-control lightbox-next"
+    id="lightboxNext"
+    aria-label="Fotografía siguiente">
+    &#10095;
+  </button>
 
-      function showNext() {
-        if (!currentGallery.length) return;
-        currentIndex = (currentIndex + 1) % currentGallery.length;
-        updateLightbox();
-      }
+</div>
 
-      galleries.forEach((item) => {
-        item.addEventListener('click', function () {
-          try {
-            const images = JSON.parse(this.dataset.gallery);
-            openGallery(images, 0);
-          } catch (error) {
-            console.error('Galería inválida', error);
-          }
-        });
+<!-- ======================================
+     PIE DE PÁGINA
+====================================== -->
 
-        item.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            try {
-              const images = JSON.parse(this.dataset.gallery);
-              openGallery(images, 0);
-            } catch (error) {
-              console.error('Galería inválida', error);
-            }
-          }
-        });
+<footer class="ap-footer">
+
+  <p>
+    &copy; 2026 Arquitectura y Prefabricados.
+    Todos los derechos reservados.
+  </p>
+
+  <div class="ap-footer-links">
+
+    <a
+      href="https://www.facebook.com/arquitecturaprefabricados"
+      target="_blank"
+      rel="noopener noreferrer">
+      Facebook
+    </a>
+
+    <a
+      href="https://www.instagram.com/arquitecturayprefabricados"
+      target="_blank"
+      rel="noopener noreferrer">
+      Instagram
+    </a>
+
+    <a href="contacto.html">
+      Contacto
+    </a>
+
+  </div>
+
+</footer>
+
+<!-- ======================================
+     CONTROL DE GALERÍAS
+====================================== -->
+
+<script>
+(function () {
+
+  const lightbox =
+    document.getElementById("lightbox");
+
+  const lightboxImage =
+    document.getElementById("lightboxImage");
+
+  const lightboxClose =
+    document.getElementById("lightboxClose");
+
+  const lightboxPrev =
+    document.getElementById("lightboxPrev");
+
+  const lightboxNext =
+    document.getElementById("lightboxNext");
+
+  const lightboxStage =
+    document.getElementById("lightboxStage");
+
+  const galleryButtons =
+    document.querySelectorAll(".js-gallery");
+
+  let photos = [];
+  let index = 0;
+  let previousFocus = null;
+  let touchX = null;
+
+  /* MOSTRAR FOTOGRAFÍA */
+
+  function showPhoto() {
+
+    if (!photos.length) return;
+
+    lightboxImage.src = photos[index];
+
+    const multiple = photos.length > 1;
+
+    lightboxPrev.hidden = !multiple;
+    lightboxNext.hidden = !multiple;
+
+  }
+
+  /* ABRIR GALERÍA */
+
+  function openGallery(button) {
+
+    let gallery;
+
+    try {
+      gallery = JSON.parse(
+        button.getAttribute("data-gallery") || "[]"
+      );
+    } catch (error) {
+      return;
+    }
+
+    if (!Array.isArray(gallery)) return;
+
+    photos = gallery.filter(function (src) {
+      return typeof src === "string" && src.length > 0;
+    });
+
+    if (!photos.length) return;
+
+    index = 0;
+    previousFocus = document.activeElement;
+
+    lightbox.hidden = false;
+
+    document.body.classList.add("gallery-open");
+
+    showPhoto();
+
+    lightboxClose.focus();
+
+  }
+
+  /* CERRAR GALERÍA */
+
+  function closeGallery() {
+
+    lightbox.hidden = true;
+    lightboxImage.removeAttribute("src");
+
+    document.body.classList.remove("gallery-open");
+
+    if (previousFocus &&
+        typeof previousFocus.focus === "function") {
+      previousFocus.focus();
+    }
+
+  }
+
+  /* NAVEGACIÓN */
+
+  function nextPhoto() {
+
+    if (photos.length < 2) return;
+
+    index = (index + 1) % photos.length;
+
+    showPhoto();
+
+  }
+
+  function previousPhoto() {
+
+    if (photos.length < 2) return;
+
+    index = (
+      index - 1 + photos.length
+    ) % photos.length;
+
+    showPhoto();
+
+  }
+
+  /* ABRIR DESDE EL CATÁLOGO */
+
+  galleryButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+      openGallery(button);
+    });
+
+  });
+
+  /* CONTROLES */
+
+  lightboxClose.addEventListener(
+    "click",
+    closeGallery
+  );
+
+  lightboxNext.addEventListener(
+    "click",
+    nextPhoto
+  );
+
+  lightboxPrev.addEventListener(
+    "click",
+    previousPhoto
+  );
+
+  /* CLIC FUERA DE LA FOTOGRAFÍA */
+
+  lightbox.addEventListener("click", function (event) {
+
+    if (
+      event.target === lightbox ||
+      event.target === lightboxStage
+    ) {
+      closeGallery();
+    }
+
+  });
+
+  /* TECLADO */
+
+  document.addEventListener("keydown", function (event) {
+
+    if (lightbox.hidden) return;
+
+    if (event.key === "Escape") {
+      closeGallery();
+    }
+
+    if (event.key === "ArrowRight") {
+      nextPhoto();
+    }
+
+    if (event.key === "ArrowLeft") {
+      previousPhoto();
+    }
+
+    if (event.key === "Tab") {
+
+      const controls = [
+        lightboxClose,
+        lightboxPrev,
+        lightboxNext
+      ].filter(function (button) {
+        return !button.hidden;
       });
 
-      lightboxClose.addEventListener('click', closeGallery);
-      lightboxPrev.addEventListener('click', showPrev);
-      lightboxNext.addEventListener('click', showNext);
+      const first = controls[0];
+      const last = controls[controls.length - 1];
 
-      lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox) {
-          closeGallery();
+      if (event.shiftKey &&
+          document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey &&
+                 document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+
+    }
+
+  });
+
+  /* DESLIZAR EN CELULAR */
+
+  lightboxStage.addEventListener(
+    "touchstart",
+    function (event) {
+
+      touchX = event.changedTouches[0].screenX;
+
+    },
+    { passive: true }
+  );
+
+  lightboxStage.addEventListener(
+    "touchend",
+    function (event) {
+
+      if (touchX === null) return;
+
+      const finalX =
+        event.changedTouches[0].screenX;
+
+      const distance = finalX - touchX;
+
+      if (Math.abs(distance) > 45) {
+
+        if (distance < 0) {
+          nextPhoto();
+        } else {
+          previousPhoto();
         }
-      });
 
-      document.addEventListener('keydown', function (e) {
-        if (!lightbox.classList.contains('active')) return;
+      }
 
-        if (e.key === 'Escape') closeGallery();
-        if (e.key === 'ArrowLeft') showPrev();
-        if (e.key === 'ArrowRight') showNext();
-      });
-    })();
-  </script>
+      touchX = null;
+
+    },
+    { passive: true }
+  );
+
+  /* IMÁGENES QUE AÚN NO SE HAN SUBIDO */
+
+  lightboxImage.addEventListener("error", function () {
+
+    // Si una fotografía falla, evitar un ciclo infinito.
+    if (photos.length > 1) {
+
+      photos.splice(index, 1);
+
+      if (index >= photos.length) {
+        index = 0;
+      }
+
+      showPhoto();
+
+    } else {
+      closeGallery();
+    }
+
+  });
+
+})();
+</script>
+
 </body>
 </html>
