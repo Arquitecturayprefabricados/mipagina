@@ -53,11 +53,16 @@ content="Proyecto arquitectónico de Arquitectura y Prefabricados">
 href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap"
 rel="stylesheet">
 
-<!-- FOTOGRAFÍA -->
+<!-- PRECARGA DE LA PORTADA -->
 <link rel="preload" as="image" href="images/hero-fondo.jpg">
 
 <!-- ESTILOS GENERALES -->
 <link rel="stylesheet" href="css/estilos.css">
+
+<!-- ACTIVACIÓN DE LA PANTALLA DE BIENVENIDA -->
+<script>
+  document.documentElement.classList.add("ap-js");
+</script>
 
 <!-- DATOS ESTRUCTURADOS -->
 <script type="application/ld+json">
@@ -124,9 +129,9 @@ rel="stylesheet">
 
 <style>
 
-/* ==============================
+/* ======================================
    CONFIGURACIÓN GENERAL
-============================== */
+====================================== */
 
 body.ap-home {
   margin: 0;
@@ -140,14 +145,114 @@ body.ap-home {
   box-sizing: border-box;
 }
 
-/* ==============================
+/* ======================================
+   PANTALLA INICIAL DE BIENVENIDA
+====================================== */
+
+.ap-preloader {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  background: #080808;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 19px;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity .6s ease,
+    visibility .6s ease;
+}
+
+/* Solo mostrar cuando JavaScript está activo */
+
+.ap-js .ap-preloader {
+  display: flex;
+}
+
+/* Desaparición gradual */
+
+.ap-preloader.ap-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Línea decorativa */
+
+.ap-loader-line {
+  width: 115px;
+  height: 1px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(201,164,109,.20);
+}
+
+.ap-loader-line::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 45%;
+  height: 100%;
+
+  background: #c9a46d;
+
+  box-shadow: 0 0 9px rgba(201,164,109,.35);
+
+  animation: apLoading 1.2s ease-in-out infinite alternate;
+}
+
+/* Frase */
+
+.ap-loader-text {
+  color: #c9a46d;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(9px, 1vw, 11px);
+  font-weight: 500;
+
+  letter-spacing: .42em;
+  line-height: 1.8;
+  text-align: center;
+
+  padding: 0 16px;
+}
+
+/* Animación de línea dorada */
+
+@keyframes apLoading {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(250%);
+  }
+}
+
+/* ======================================
    ENCABEZADO PRINCIPAL
-============================== */
+====================================== */
 
 .ap-home .ap-header {
   position: relative;
   z-index: 20;
+
   width: 100%;
+
   background: #303030;
   color: #ffffff;
 }
@@ -156,38 +261,45 @@ body.ap-home {
   width: 100%;
   max-width: 1920px;
   min-height: 116px;
+
   margin: 0 auto;
   padding: 14px 38px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: clamp(14px, 1.5vw, 30px);
 }
 
-/* LOGOTIPO Y NOMBRE */
+/* LOGO Y NOMBRE */
 
 .ap-home .ap-brand {
   display: flex;
   align-items: center;
+
   gap: 17px;
   min-width: 0;
+
   flex: 0 1 auto;
 
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 
-/* LOGOTIPO CON EFECTO MARCA DE AGUA */
+/* LOGOTIPO TIPO MARCA DE AGUA */
 
 .ap-home .ap-logo {
   display: block;
+
   width: 76px;
   height: 76px;
+
   object-fit: contain;
   flex-shrink: 0;
 
   opacity: .68;
+
   filter: grayscale(100%) invert(1) contrast(1.8);
   mix-blend-mode: screen;
 
@@ -198,7 +310,7 @@ body.ap-home {
   opacity: .88;
 }
 
-/* NOMBRE COMERCIAL */
+/* NOMBRE EMPRESARIAL */
 
 .ap-home .ap-brand-name {
   margin: 0;
@@ -206,6 +318,7 @@ body.ap-home {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.35rem, 2.15vw, 2.65rem);
   font-weight: 400;
+
   line-height: 1.15;
   letter-spacing: .015em;
 
@@ -213,23 +326,25 @@ body.ap-home {
   white-space: nowrap;
 }
 
-/* LÍNEA DIVISORIA VERTICAL */
+/* DIVISOR VERTICAL */
 
 .ap-home .ap-header-divider {
   width: 4px;
   height: 78px;
+
   flex: 0 0 4px;
 
   background: rgba(255,255,255,.30);
   border-radius: 3px;
 }
 
-/* MENÚ DE NAVEGACIÓN */
+/* MENÚ */
 
 .ap-home .ap-nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
   flex: 0 0 auto;
 
   gap: clamp(16px, 2.2vw, 42px);
@@ -238,15 +353,18 @@ body.ap-home {
 
 .ap-home .ap-nav a {
   display: inline-block;
+
   padding: 10px 2px;
 
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1rem, 1.3vw, 1.55rem);
   font-weight: 400;
+
   line-height: 1.3;
 
   color: #ffffff;
   text-decoration: none;
+
   white-space: nowrap;
 
   transition: color .2s ease;
@@ -257,26 +375,31 @@ body.ap-home {
   color: #e7c79c;
 }
 
-/* ==============================
+/* ======================================
    PORTADA PRINCIPAL
-============================== */
+====================================== */
 
 .ap-home .ap-hero {
   position: relative;
+
   width: 100%;
+
   min-height: 620px;
   height: calc(100svh - 116px);
   max-height: 950px;
+
   overflow: hidden;
   isolation: isolate;
+
   background-color: #3d4446;
 }
 
-/* FOTOGRAFÍA DE PORTADA */
+/* FOTOGRAFÍA */
 
 .ap-home .ap-hero-background {
   position: absolute;
   inset: 0;
+
   z-index: -1;
 
   background-image:
@@ -298,12 +421,13 @@ body.ap-home {
   background-repeat: no-repeat;
 }
 
-/* ==============================
+/* ======================================
    LEMA SUPERIOR IZQUIERDO
-============================== */
+====================================== */
 
 .ap-home .ap-slogan {
   position: absolute;
+
   z-index: 3;
 
   top: clamp(55px, 11vh, 140px);
@@ -320,11 +444,13 @@ body.ap-home {
   display: block;
 
   font-family: 'Cormorant Garamond', Georgia, serif;
+
   font-style: normal;
   font-weight: 500;
-  line-height: 1.12;
 
+  line-height: 1.12;
   white-space: nowrap;
+
   text-shadow: 0 2px 10px rgba(0,0,0,.50);
 }
 
@@ -335,19 +461,23 @@ body.ap-home {
 .ap-home .ap-slogan-second {
   margin-top: 2px;
   margin-left: clamp(18px, 4.5vw, 70px);
+
   font-size: clamp(1.65rem, 2.45vw, 2.6rem);
 }
 
-/* ==============================
+/* ======================================
    CUADRO INFORMATIVO
-============================== */
+====================================== */
 
 .ap-home .ap-intro {
   position: absolute;
+
   z-index: 3;
 
   left: clamp(20px, 2.2vw, 45px);
-  bottom: clamp(18px, 3vh, 45px);
+
+  /* Posición ligeramente elevada */
+  bottom: clamp(38px, 6vh, 70px);
 
   width: min(620px, 52vw);
   max-width: calc(100% - 40px);
@@ -365,11 +495,13 @@ body.ap-home {
   margin: 0 0 14px;
 
   font-family: 'Montserrat', sans-serif;
+
   font-size: clamp(.84rem, .98vw, .98rem);
   font-weight: 400;
-  line-height: 1.72;
 
+  line-height: 1.72;
   text-align: left;
+
   color: #ffffff;
 
   text-shadow: 0 1px 3px rgba(0,0,0,.45);
@@ -379,31 +511,35 @@ body.ap-home {
   margin-bottom: 0;
 }
 
-/* ==============================
+/* ======================================
    BOTONES
-============================== */
+====================================== */
 
 .ap-home .ap-actions {
   display: flex;
+
   gap: 10px;
   flex-wrap: wrap;
+
   margin-top: 20px;
 }
 
 .ap-home .ap-button {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
   min-height: 42px;
   padding: 11px 16px;
+
   border-radius: 4px;
 
   font-family: 'Montserrat', sans-serif;
   font-size: .82rem;
   font-weight: 600;
-  line-height: 1.3;
 
+  line-height: 1.3;
   text-align: center;
   text-decoration: none;
 
@@ -422,6 +558,7 @@ body.ap-home {
 .ap-home .ap-button-secondary {
   background: rgba(0,0,0,.22);
   border: 1px solid rgba(255,255,255,.75);
+
   color: #ffffff;
 }
 
@@ -429,13 +566,15 @@ body.ap-home {
   background: rgba(255,255,255,.17);
 }
 
-/* ==============================
+/* ======================================
    PIE DE PÁGINA
-============================== */
+====================================== */
 
 .ap-home .ap-footer {
   padding: 23px 18px;
+
   background: #292929;
+
   text-align: center;
   color: #eeeeee;
 }
@@ -443,31 +582,36 @@ body.ap-home {
 .ap-home .ap-footer p {
   font-size: .8rem;
   color: #eeeeee;
+
   margin: 0 0 12px;
 }
 
 .ap-home .ap-footer-links {
   display: flex;
+
   justify-content: center;
   flex-wrap: wrap;
+
   gap: 20px;
 }
 
 .ap-home .ap-footer a {
   color: #f0d3ae;
+
   font-size: .8rem;
   text-decoration: none;
 }
 
-/* ==============================
-   TABLETAS Y PANTALLAS MEDIANAS
-============================== */
+/* ======================================
+   PANTALLAS INTERMEDIAS
+====================================== */
 
 @media (min-width: 769px) and (max-width: 1200px) {
 
   .ap-home .ap-header-inner {
     flex-wrap: wrap;
     justify-content: center;
+
     gap: 12px;
     padding: 14px 25px;
   }
@@ -486,8 +630,10 @@ body.ap-home {
 
   .ap-home .ap-nav {
     width: 100%;
+
     margin-left: 0;
     justify-content: center;
+
     gap: 32px;
   }
 
@@ -509,26 +655,29 @@ body.ap-home {
   }
 }
 
-/* ==============================
+/* ======================================
    VERSIÓN PARA CELULARES
-============================== */
+====================================== */
 
 @media (max-width: 768px) {
 
-  /* HEADER MÓVIL */
+  /* ENCABEZADO */
 
   .ap-home .ap-header-inner {
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 
     gap: 12px;
     padding: 14px 12px 10px;
+
     min-height: auto;
   }
 
   .ap-home .ap-brand {
     width: 100%;
+
     justify-content: center;
     gap: 11px;
   }
@@ -540,8 +689,10 @@ body.ap-home {
 
   .ap-home .ap-brand-name {
     font-size: clamp(.95rem, 3.5vw, 1.4rem);
+
     line-height: 1.2;
     white-space: normal;
+
     text-align: left;
   }
 
@@ -551,11 +702,14 @@ body.ap-home {
 
   .ap-home .ap-nav {
     display: grid;
+
     grid-template-columns: repeat(4, minmax(0, 1fr));
 
     width: 100%;
+
     gap: 4px;
     margin: 0;
+
     text-align: center;
   }
 
@@ -564,7 +718,7 @@ body.ap-home {
     padding: 10px 2px;
   }
 
-  /* IMAGEN DE PORTADA */
+  /* PORTADA MÓVIL */
 
   .ap-home .ap-hero {
     display: flex;
@@ -581,7 +735,9 @@ body.ap-home {
   .ap-home .ap-hero-background {
     position: relative;
     inset: auto;
+
     z-index: 0;
+
     flex: none;
 
     width: 100%;
@@ -612,6 +768,7 @@ body.ap-home {
 
     width: auto;
     max-width: none;
+
     text-align: left;
   }
 
@@ -628,10 +785,11 @@ body.ap-home {
     font-size: clamp(1.15rem, 4.6vw, 1.9rem);
   }
 
-  /* INFORMACIÓN MÓVIL */
+  /* CUADRO INFORMATIVO MÓVIL */
 
   .ap-home .ap-intro {
     position: relative;
+
     left: auto;
     bottom: auto;
 
@@ -640,6 +798,7 @@ body.ap-home {
     margin: 0;
 
     padding: 27px 21px 30px;
+
     border-radius: 0;
 
     background: #f6f3ee;
@@ -650,14 +809,17 @@ body.ap-home {
 
   .ap-home .ap-intro p {
     color: #333333;
+
     font-size: .94rem;
     line-height: 1.75;
+
     text-shadow: none;
   }
 
   .ap-home .ap-button-secondary {
     background: transparent;
     color: #25333b;
+
     border-color: #a5a5a5;
   }
 
@@ -666,9 +828,9 @@ body.ap-home {
   }
 }
 
-/* ==============================
+/* ======================================
    CELULARES PEQUEÑOS
-============================== */
+====================================== */
 
 @media (max-width: 380px) {
 
@@ -699,13 +861,24 @@ body.ap-home {
   }
 }
 
-/* ACCESIBILIDAD */
+/* ======================================
+   ACCESIBILIDAD
+====================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
   .ap-home *,
   .ap-home *::before,
   .ap-home *::after {
+    transition: none;
+  }
+
+  .ap-loader-line::after {
+    animation: none;
+    transform: translateX(65%);
+  }
+
+  .ap-preloader {
     transition: none;
   }
 }
@@ -716,13 +889,30 @@ body.ap-home {
 
 <body class="ap-home">
 
-<!-- ENCABEZADO NUEVO -->
+<!-- ======================================
+     PANTALLA DE BIENVENIDA
+====================================== -->
+
+<div id="ap-preloader"
+     class="ap-preloader"
+     aria-hidden="true">
+
+  <div class="ap-loader-line"></div>
+
+  <div class="ap-loader-text">
+    DANDO FORMA A TUS IDEAS
+  </div>
+
+</div>
+
+<!-- ======================================
+     ENCABEZADO
+====================================== -->
 
 <header class="ap-header">
 
   <div class="ap-header-inner">
 
-    <!-- LOGO Y NOMBRE -->
     <a class="ap-brand"
        href="index.html"
        aria-label="Arquitectura y Prefabricados - Inicio">
@@ -740,16 +930,29 @@ body.ap-home {
 
     </a>
 
-    <!-- LÍNEA DIVISORIA -->
-    <div class="ap-header-divider" aria-hidden="true"></div>
+    <div class="ap-header-divider"
+         aria-hidden="true">
+    </div>
 
-    <!-- MENÚ -->
-    <nav class="ap-nav" aria-label="Navegación principal">
+    <nav class="ap-nav"
+         aria-label="Navegación principal">
 
-      <a href="index.html" aria-current="page">Inicio</a>
-      <a href="productos.html">Productos</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="index.html"
+         aria-current="page">
+        Inicio
+      </a>
+
+      <a href="productos.html">
+        Productos
+      </a>
+
+      <a href="servicios.html">
+        Servicios
+      </a>
+
+      <a href="contacto.html">
+        Contacto
+      </a>
 
     </nav>
 
@@ -759,17 +962,20 @@ body.ap-home {
 
 <main>
 
-<!-- PORTADA PRINCIPAL -->
+<!-- ======================================
+     PORTADA PRINCIPAL
+====================================== -->
 
 <section class="ap-hero"
   aria-label="Presentación de Arquitectura y Prefabricados">
 
   <!-- FOTOGRAFÍA -->
-  <div class="ap-hero-background" role="img"
-    aria-label="Visualización arquitectónica de una vivienda residencial">
+  <div class="ap-hero-background"
+       role="img"
+       aria-label="Visualización arquitectónica de una vivienda residencial">
   </div>
 
-  <!-- LEMA -->
+  <!-- LEMA PRINCIPAL -->
   <div class="ap-slogan">
 
     <span class="ap-slogan-line ap-slogan-first">
@@ -826,7 +1032,9 @@ body.ap-home {
 
 </main>
 
-<!-- PIE DE PÁGINA -->
+<!-- ======================================
+     PIE DE PÁGINA
+====================================== -->
 
 <footer class="ap-footer">
 
@@ -849,11 +1057,69 @@ body.ap-home {
       Instagram
     </a>
 
-    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html">
+      Contacto
+    </a>
 
   </div>
 
 </footer>
+
+<!-- ======================================
+     CONTROL DE LA ANIMACIÓN DE BIENVENIDA
+====================================== -->
+
+<script>
+(function () {
+
+  const preloader = document.getElementById("ap-preloader");
+
+  if (!preloader) return;
+
+  let cerrado = false;
+
+  function cerrarPreloader() {
+
+    if (cerrado) return;
+
+    cerrado = true;
+
+    preloader.classList.add("ap-hidden");
+
+    // Retirar el elemento después de la transición.
+    window.setTimeout(function () {
+      preloader.remove();
+    }, 650);
+
+  }
+
+  function cerrarTrasCarga() {
+    window.setTimeout(cerrarPreloader, 450);
+  }
+
+  // Cerrar cuando los recursos hayan terminado de cargar.
+  if (document.readyState === "complete") {
+    cerrarTrasCarga();
+  } else {
+    window.addEventListener(
+      "load",
+      cerrarTrasCarga,
+      { once: true }
+    );
+  }
+
+  // Límite para evitar que bloquee el sitio.
+  window.setTimeout(cerrarPreloader, 1800);
+
+  // Evitar mostrarlo nuevamente al regresar con el navegador.
+  window.addEventListener("pageshow", function (event) {
+    if (event.persisted) {
+      cerrarPreloader();
+    }
+  });
+
+})();
+</script>
 
 </body>
 </html>
