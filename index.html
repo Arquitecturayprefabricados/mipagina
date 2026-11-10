@@ -32,7 +32,7 @@ href="https://arquitecturayprefabricados.github.io/mipagina/">
 content="Arquitectura y Prefabricados | Ambato, Ecuador">
 
 <meta property="og:description"
-content="Diseño arquitectónico, planos, construcción de viviendas y prefabricados en Ambato.">
+content="Diseño arquitectónico, planos, permisos municipales, construcción de viviendas y prefabricados de hormigón en Ambato.">
 
 <meta property="og:url"
 content="https://arquitecturayprefabricados.github.io/mipagina/">
@@ -49,7 +49,8 @@ content="Proyecto arquitectónico de Arquitectura y Prefabricados">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+<link
+href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap"
 rel="stylesheet">
 
 <!-- FOTOGRAFÍA -->
@@ -123,7 +124,9 @@ rel="stylesheet">
 
 <style>
 
-/* CONFIGURACIÓN GENERAL */
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
 
 body.ap-home {
   margin: 0;
@@ -137,87 +140,139 @@ body.ap-home {
   box-sizing: border-box;
 }
 
-/* ENCABEZADO */
+/* ==============================
+   ENCABEZADO PRINCIPAL
+============================== */
 
 .ap-home .ap-header {
   position: relative;
-  z-index: 10;
+  z-index: 20;
   width: 100%;
-  background: #2e2e2e;
-  color: #fff;
+  background: #303030;
+  color: #ffffff;
 }
 
 .ap-home .ap-header-inner {
-  max-width: 1800px;
-  min-height: 90px;
-  margin: auto;
-  padding: 12px 30px;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 116px;
+  margin: 0 auto;
+  padding: 14px 38px;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  justify-content: space-between;
+  gap: clamp(14px, 1.5vw, 30px);
 }
+
+/* LOGOTIPO Y NOMBRE */
 
 .ap-home .ap-brand {
   display: flex;
   align-items: center;
-  gap: 16px;
-  text-decoration: none;
-  color: white;
+  gap: 17px;
   min-width: 0;
+  flex: 0 1 auto;
+
+  color: #ffffff;
+  text-decoration: none;
 }
+
+/* LOGOTIPO CON EFECTO MARCA DE AGUA */
 
 .ap-home .ap-logo {
-  width: 62px;
-  height: 62px;
+  display: block;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
   flex-shrink: 0;
+
+  opacity: .68;
+  filter: grayscale(100%) invert(1) contrast(1.8);
+  mix-blend-mode: screen;
+
+  transition: opacity .25s ease;
 }
 
-.ap-home .ap-brand-name {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  font-size: clamp(1.15rem, 2vw, 1.9rem);
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 0;
+.ap-home .ap-brand:hover .ap-logo {
+  opacity: .88;
 }
+
+/* NOMBRE COMERCIAL */
+
+.ap-home .ap-brand-name {
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.35rem, 2.15vw, 2.65rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: .015em;
+
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* LÍNEA DIVISORIA VERTICAL */
+
+.ap-home .ap-header-divider {
+  width: 4px;
+  height: 78px;
+  flex: 0 0 4px;
+
+  background: rgba(255,255,255,.30);
+  border-radius: 3px;
+}
+
+/* MENÚ DE NAVEGACIÓN */
 
 .ap-home .ap-nav {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(12px, 2vw, 35px);
+  flex: 0 0 auto;
+
+  gap: clamp(16px, 2.2vw, 42px);
+  margin-left: auto;
 }
 
 .ap-home .ap-nav a {
-  color: white;
-  text-decoration: none;
+  display: inline-block;
+  padding: 10px 2px;
+
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  padding: 8px 2px;
+  font-size: clamp(1rem, 1.3vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.3;
+
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+
   transition: color .2s ease;
 }
 
-.ap-home .ap-nav a:hover {
-  color: #e4b982;
+.ap-home .ap-nav a:hover,
+.ap-home .ap-nav a:focus-visible {
+  color: #e7c79c;
 }
 
-/* PORTADA PRINCIPAL */
+/* ==============================
+   PORTADA PRINCIPAL
+============================== */
 
 .ap-home .ap-hero {
   position: relative;
   width: 100%;
   min-height: 620px;
-  height: calc(100svh - 90px);
+  height: calc(100svh - 116px);
   max-height: 950px;
   overflow: hidden;
   isolation: isolate;
   background-color: #3d4446;
 }
 
-/* IMAGEN Y SOMBREADO */
+/* FOTOGRAFÍA DE PORTADA */
 
 .ap-home .ap-hero-background {
   position: absolute;
@@ -243,25 +298,32 @@ body.ap-home {
   background-repeat: no-repeat;
 }
 
-/* LEMA SUPERIOR IZQUIERDO */
+/* ==============================
+   LEMA SUPERIOR IZQUIERDO
+============================== */
 
 .ap-home .ap-slogan {
   position: absolute;
   z-index: 3;
+
   top: clamp(55px, 11vh, 140px);
   left: clamp(25px, 6vw, 105px);
+
   width: max-content;
   max-width: calc(100% - 50px);
-  color: white;
+
+  color: #ffffff;
   pointer-events: none;
 }
 
 .ap-home .ap-slogan-line {
   display: block;
+
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: normal;
   font-weight: 500;
   line-height: 1.12;
+
   white-space: nowrap;
   text-shadow: 0 2px 10px rgba(0,0,0,.50);
 }
@@ -276,32 +338,40 @@ body.ap-home {
   font-size: clamp(1.65rem, 2.45vw, 2.6rem);
 }
 
-/* CUADRO INFORMATIVO INFERIOR IZQUIERDO */
+/* ==============================
+   CUADRO INFORMATIVO
+============================== */
 
 .ap-home .ap-intro {
   position: absolute;
   z-index: 3;
+
   left: clamp(20px, 2.2vw, 45px);
   bottom: clamp(18px, 3vh, 45px);
+
   width: min(620px, 52vw);
   max-width: calc(100% - 40px);
+
   padding: 22px 24px 20px;
   border-radius: 9px;
 
-  background: rgba(17, 24, 28, .40);
-  color: white;
+  background: rgba(17,24,28,.40);
+  color: #ffffff;
 
   box-shadow: 0 6px 22px rgba(0,0,0,.12);
 }
 
 .ap-home .ap-intro p {
   margin: 0 0 14px;
+
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(.78rem, .92vw, .91rem);
+  font-size: clamp(.84rem, .98vw, .98rem);
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.72;
+
   text-align: left;
-  color: #fff;
+  color: #ffffff;
+
   text-shadow: 0 1px 3px rgba(0,0,0,.45);
 }
 
@@ -309,27 +379,31 @@ body.ap-home {
   margin-bottom: 0;
 }
 
-/* BOTONES */
+/* ==============================
+   BOTONES
+============================== */
 
 .ap-home .ap-actions {
   display: flex;
-  gap: 9px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .ap-home .ap-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
-  padding: 10px 14px;
+
+  min-height: 42px;
+  padding: 11px 16px;
   border-radius: 4px;
 
   font-family: 'Montserrat', sans-serif;
-  font-size: .76rem;
+  font-size: .82rem;
   font-weight: 600;
   line-height: 1.3;
+
   text-align: center;
   text-decoration: none;
 
@@ -348,25 +422,27 @@ body.ap-home {
 .ap-home .ap-button-secondary {
   background: rgba(0,0,0,.22);
   border: 1px solid rgba(255,255,255,.75);
-  color: white;
+  color: #ffffff;
 }
 
 .ap-home .ap-button-secondary:hover {
   background: rgba(255,255,255,.17);
 }
 
-/* PIE DE PÁGINA */
+/* ==============================
+   PIE DE PÁGINA
+============================== */
 
 .ap-home .ap-footer {
   padding: 23px 18px;
   background: #292929;
   text-align: center;
-  color: #eee;
+  color: #eeeeee;
 }
 
 .ap-home .ap-footer p {
   font-size: .8rem;
-  color: #eee;
+  color: #eeeeee;
   margin: 0 0 12px;
 }
 
@@ -383,17 +459,40 @@ body.ap-home {
   text-decoration: none;
 }
 
-/* TABLETAS Y PANTALLAS INTERMEDIAS */
+/* ==============================
+   TABLETAS Y PANTALLAS MEDIANAS
+============================== */
 
-@media (min-width: 769px) and (max-width: 1100px) {
+@media (min-width: 769px) and (max-width: 1200px) {
 
   .ap-home .ap-header-inner {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
+    padding: 14px 25px;
+  }
+
+  .ap-home .ap-brand {
+    flex: 0 1 auto;
+  }
+
+  .ap-home .ap-brand-name {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+  }
+
+  .ap-home .ap-header-divider {
+    display: none;
   }
 
   .ap-home .ap-nav {
+    width: 100%;
+    margin-left: 0;
     justify-content: center;
+    gap: 32px;
+  }
+
+  .ap-home .ap-nav a {
+    font-size: 1.15rem;
   }
 
   .ap-home .ap-hero {
@@ -406,59 +505,75 @@ body.ap-home {
   }
 
   .ap-home .ap-intro {
-    width: min(420px, 55vw);
+    width: min(560px, 68vw);
   }
 }
 
-/* CELULARES */
+/* ==============================
+   VERSIÓN PARA CELULARES
+============================== */
 
 @media (max-width: 768px) {
 
-  /* Encabezado adaptable */
+  /* HEADER MÓVIL */
 
   .ap-home .ap-header-inner {
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 12px 12px 8px;
+
+    gap: 12px;
+    padding: 14px 12px 10px;
     min-height: auto;
   }
 
   .ap-home .ap-brand {
+    width: 100%;
     justify-content: center;
-    gap: 10px;
+    gap: 11px;
   }
 
   .ap-home .ap-logo {
-    width: 45px;
-    height: 45px;
+    width: 52px;
+    height: 52px;
   }
 
   .ap-home .ap-brand-name {
-    font-size: clamp(.95rem, 3.7vw, 1.3rem);
+    font-size: clamp(.95rem, 3.5vw, 1.4rem);
+    line-height: 1.2;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .ap-home .ap-header-divider {
+    display: none;
   }
 
   .ap-home .ap-nav {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 3px;
+
     width: 100%;
+    gap: 4px;
+    margin: 0;
     text-align: center;
   }
 
   .ap-home .ap-nav a {
-    font-size: clamp(.72rem, 2.6vw, .88rem);
+    font-size: clamp(.72rem, 2.6vw, .9rem);
     padding: 10px 2px;
   }
 
-  /* Imagen protagonista */
+  /* IMAGEN DE PORTADA */
 
   .ap-home .ap-hero {
     display: flex;
     flex-direction: column;
+
     height: auto;
     min-height: 0;
     max-height: none;
+
     overflow: visible;
     background: #f6f3ee;
   }
@@ -468,6 +583,7 @@ body.ap-home {
     inset: auto;
     z-index: 0;
     flex: none;
+
     width: 100%;
     height: clamp(340px, 56svh, 550px);
 
@@ -484,14 +600,16 @@ body.ap-home {
     background-position: 61% center;
   }
 
-  /* Lema sobre la imagen */
+  /* LEMA MÓVIL */
 
   .ap-home .ap-slogan {
     position: absolute;
     z-index: 3;
+
     top: 32px;
     left: 15px;
     right: 15px;
+
     width: auto;
     max-width: none;
     text-align: left;
@@ -510,24 +628,28 @@ body.ap-home {
     font-size: clamp(1.15rem, 4.6vw, 1.9rem);
   }
 
-  /* Texto comercial debajo de la fotografía */
+  /* INFORMACIÓN MÓVIL */
 
   .ap-home .ap-intro {
     position: relative;
     left: auto;
     bottom: auto;
+
     width: 100%;
     max-width: none;
     margin: 0;
+
     padding: 27px 21px 30px;
     border-radius: 0;
+
     background: #f6f3ee;
     color: #292929;
+
     box-shadow: none;
   }
 
   .ap-home .ap-intro p {
-    color: #333;
+    color: #333333;
     font-size: .94rem;
     line-height: 1.75;
     text-shadow: none;
@@ -544,9 +666,20 @@ body.ap-home {
   }
 }
 
-/* CELULARES PEQUEÑOS */
+/* ==============================
+   CELULARES PEQUEÑOS
+============================== */
 
 @media (max-width: 380px) {
+
+  .ap-home .ap-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .ap-home .ap-brand-name {
+    font-size: .95rem;
+  }
 
   .ap-home .ap-slogan-first {
     font-size: 1.12rem;
@@ -569,6 +702,7 @@ body.ap-home {
 /* ACCESIBILIDAD */
 
 @media (prefers-reduced-motion: reduce) {
+
   .ap-home *,
   .ap-home *::before,
   .ap-home *::after {
@@ -582,12 +716,13 @@ body.ap-home {
 
 <body class="ap-home">
 
-<!-- ENCABEZADO -->
+<!-- ENCABEZADO NUEVO -->
 
 <header class="ap-header">
 
   <div class="ap-header-inner">
 
+    <!-- LOGO Y NOMBRE -->
     <a class="ap-brand"
        href="index.html"
        aria-label="Arquitectura y Prefabricados - Inicio">
@@ -596,8 +731,8 @@ body.ap-home {
         src="images/logo.png"
         alt="Logotipo de Arquitectura y Prefabricados"
         class="ap-logo"
-        width="62"
-        height="62">
+        width="76"
+        height="76">
 
       <h1 class="ap-brand-name">
         ARQUITECTURA Y PREFABRICADOS
@@ -605,11 +740,17 @@ body.ap-home {
 
     </a>
 
+    <!-- LÍNEA DIVISORIA -->
+    <div class="ap-header-divider" aria-hidden="true"></div>
+
+    <!-- MENÚ -->
     <nav class="ap-nav" aria-label="Navegación principal">
+
       <a href="index.html" aria-current="page">Inicio</a>
       <a href="productos.html">Productos</a>
       <a href="servicios.html">Servicios</a>
       <a href="contacto.html">Contacto</a>
+
     </nav>
 
   </div>
@@ -623,12 +764,12 @@ body.ap-home {
 <section class="ap-hero"
   aria-label="Presentación de Arquitectura y Prefabricados">
 
-  <!-- FOTOGRAFÍA DE PORTADA -->
+  <!-- FOTOGRAFÍA -->
   <div class="ap-hero-background" role="img"
     aria-label="Visualización arquitectónica de una vivienda residencial">
   </div>
 
-  <!-- LEMA SUPERIOR IZQUIERDO -->
+  <!-- LEMA -->
   <div class="ap-slogan">
 
     <span class="ap-slogan-line ap-slogan-first">
@@ -662,6 +803,7 @@ body.ap-home {
       elementos constructivos.
     </p>
 
+    <!-- BOTONES -->
     <div class="ap-actions">
 
       <a class="ap-button ap-button-primary"
@@ -707,9 +849,7 @@ body.ap-home {
       Instagram
     </a>
 
-    <a href="contacto.html">
-      Contacto
-    </a>
+    <a href="contacto.html">Contacto</a>
 
   </div>
 
