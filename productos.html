@@ -136,62 +136,46 @@
       letter-spacing:.35px;
     }
     .ap-quality-mark { width:7px; height:7px; background:#a68b66; transform:rotate(45deg); }
-    /* Volúmenes arquitectónicos abstractos: no requiere subir imagen. */
+    /* IMAGEN REAL DEL HORMIGÓN: dos placas superpuestas.
+       Fondo sin tarjetas para mostrar poros e irregularidades de superficie. */
     .ap-material-visual {
-      display:flex;
       position:relative;
+      display:flex;
       flex-direction:column;
-      justify-content:space-between;
-      min-height:355px;
-      padding:24px;
-      overflow:hidden;
-      background:linear-gradient(145deg,#d5d3cc 0%,#bcbcb4 53%,#d9d7cf 100%);
-      border:1px solid rgba(65,65,65,.13);
+      justify-content:center;
+      min-width:0;
+      margin:0;
+      padding:0;
+      background:transparent;
+      border:0;
     }
-    .ap-material-visual::before {
-      content:"";
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      background-image:radial-gradient(rgba(49,49,49,.22) .6px,transparent .9px);
-      background-size:6px 6px;
-      opacity:.22;
+    .ap-material-image {
+      display:block;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      /* Integra el blanco de la fotografía con el gris claro de la sección. */
+      mix-blend-mode:multiply;
     }
-    .ap-material-visual-inner { position:relative; flex:1; min-height:260px; }
-    .ap-concrete-block {
-      position:absolute;
-      width:57%;
-      height:42%;
-      border:1px solid rgba(75,75,75,.17);
-      box-shadow:9px 12px 18px rgba(44,44,44,.1);
-      transform:skewY(-10deg);
-    }
-    .ap-block-back { top:9%; left:28%; background:linear-gradient(140deg,#ecebe6,#b7b7b0); }
-    .ap-block-middle { top:28%; left:17%; background:linear-gradient(140deg,#dfded7,#a9a9a1); }
-    .ap-block-front { top:47%; left:6%; background:linear-gradient(140deg,#d5d4cd,#999991); }
-    .ap-material-axis { position:absolute; width:72%; height:1px; bottom:6%; right:0; background:rgba(85,80,71,.43); }
     .ap-material-visual-footer {
       display:flex;
-      position:relative;
-      z-index:1;
       justify-content:space-between;
       gap:12px;
-      padding-top:14px;
-      border-top:1px solid rgba(70,70,70,.25);
+      margin:0 2.5%;
+      padding:12px 0 0;
+      border-top:1px solid rgba(70,70,70,.24);
       color:#554f47;
       font-size:.57rem;
       font-weight:600;
-      letter-spacing:1.3px;
+      letter-spacing:1.2px;
     }
     @media (max-width:1000px) {
-      .ap-material-inner { grid-template-columns:1fr; gap:30px; padding:50px 30px 55px; }
+      .ap-material-inner { grid-template-columns:1fr; gap:28px; padding:50px 30px 55px; }
       .ap-material-content h1 { max-width:800px; font-size:clamp(2.55rem,5.6vw,3.7rem); }
-      .ap-material-visual { min-height:270px; }
-      .ap-material-visual-inner { min-height:190px; }
-      .ap-concrete-block { width:44%; }
+      .ap-material-visual { width:min(540px,100%); margin:0 auto; }
     }
     @media (max-width:768px) {
-      .ap-material-inner { gap:28px; padding:42px 21px 46px; }
+      .ap-material-inner { gap:22px; padding:42px 21px 44px; }
       .ap-material-label { gap:10px; margin-bottom:18px; font-size:.60rem; letter-spacing:1.65px; }
       .ap-label-line { flex-basis:24px; }
       .ap-material-content h1 { font-size:clamp(2.15rem,8vw,3.1rem); line-height:1.08; }
@@ -199,9 +183,7 @@
       .ap-material-description { font-size:.88rem; line-height:1.77; text-align:left; }
       .ap-material-qualities { gap:13px 20px; margin-top:23px; padding-top:19px; }
       .ap-material-quality { font-size:.7rem; }
-      .ap-material-visual { min-height:245px; padding:17px; }
-      .ap-material-visual-inner { min-height:176px; }
-      .ap-concrete-block { width:55%; }
+      .ap-material-visual { width:min(420px,100%); }
       .ap-material-visual-footer { font-size:.51rem; letter-spacing:.7px; }
     }
 
@@ -318,16 +300,21 @@
             <span class="ap-material-quality"><span class="ap-quality-mark" aria-hidden="true"></span>Versatilidad</span>
           </div>
         </div>
-        <!-- Recurso decorativo hecho con CSS; no es una fotografía de producto -->
-        <div class="ap-material-visual" aria-hidden="true">
-          <div class="ap-material-visual-inner">
-            <div class="ap-concrete-block ap-block-back"></div>
-            <div class="ap-concrete-block ap-block-middle"></div>
-            <div class="ap-concrete-block ap-block-front"></div>
-            <div class="ap-material-axis"></div>
-          </div>
-          <div class="ap-material-visual-footer"><span>MATERIAL QUE TOMA FORMA</span><span>01 / AP</span></div>
-        </div>
+        <!-- Fotografía aprobada: subir hormigon-textura.png a la carpeta images/ -->
+        <figure class="ap-material-visual">
+          <img
+            class="ap-material-image"
+            src="images/hormigon-textura.png"
+            alt="Dos placas de hormigón superpuestas con textura natural, poros e irregularidades en su superficie"
+            width="1254"
+            height="1254"
+            decoding="async"
+            fetchpriority="high">
+          <figcaption class="ap-material-visual-footer">
+            <span>MATERIAL QUE TOMA FORMA</span>
+            <span>01 / AP</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
