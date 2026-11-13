@@ -1,124 +1,383 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- SEO mejorado -->
-  <title>Contacto - Arquitectura & Prefabricados | Ambato, Ecuador</title>
-  <meta name="description" content="Contacto con Arquitectura & Prefabricados en Ambato. Coordina tu reunión para proyectos de arquitectura, construcción y prefabricados de hormigón." />
-  <meta name="keywords" content="contacto arquitectura Ambato, asesoría construcción, prefabricados hormigón, diseño estructural, reuniones arquitectura, servicios construcción Ecuador" />
-  <meta name="author" content="Arquitectura & Prefabricados" />
-  <link rel="canonical" href="https://arquitecturayprefabricados.github.io/mipagina/contacto.html" />
-  
-  <!-- Fuentes e iconos -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/estilos.css" />
-  
-  <!-- Schema LocalBusiness para SEO local -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#303030">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Arquitectura y Prefabricados">
+  <title>Contacto | Arquitectura y Prefabricados — Ambato</title>
+  <meta name="description" content="Conversemos sobre su proyecto. Contáctenos para gestión de permisos, diseño arquitectónico, construcción y cerramientos. Oficina en Ambato, Ecuador.">
+  <link rel="canonical" href="https://arquitecturayprefabricados.github.io/mipagina/contacto.html">
+  <link rel="icon" type="image/jpeg" href="images/logopeque.jpg?v=3">
+  <link rel="apple-touch-icon" href="images/logopeque.jpg?v=3">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:site_name" content="Arquitectura y Prefabricados">
+  <meta property="og:title" content="Contacto | Arquitectura y Prefabricados">
+  <meta property="og:description" content="Cuéntenos qué tiene en mente. Le orientamos en diseño, permisos, construcción y prefabricados.">
+  <meta property="og:url" content="https://arquitecturayprefabricados.github.io/mipagina/contacto.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Arquitectura & Prefabricados",
-    "image": "https://arquitecturayprefabricados.github.io/mipagina/images/logo.png",
-    "telephone": "+593 992941294",
+    "@type": "ProfessionalService",
+    "@id": "https://arquitecturayprefabricados.github.io/mipagina/#empresa",
+    "name": "Arquitectura y Prefabricados",
+    "url": "https://arquitecturayprefabricados.github.io/mipagina/",
+    "telephone": "+593992941294",
     "email": "andre5125@yahoo.es",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Bolivariana y Víctor Hugo",
       "addressLocality": "Ambato",
       "addressRegion": "Tungurahua",
-      "postalCode": "180104",
       "addressCountry": "EC"
     },
-    "url": "https://arquitecturayprefabricados.github.io/mipagina/contacto.html",
-    "sameAs": [
-      "https://www.facebook.com/arquitecturaprefabricados",
-      "https://www.instagram.com/arquitecturayprefabricados",
-      "https://wa.me/593992941294"
-    ]
+    "contactPoint": {"@type":"ContactPoint","contactType":"consultas de proyectos","telephone":"+593992941294","availableLanguage":"Spanish"}
   }
   </script>
-</head>
-<body>
+  <style>
+    :root {
+      --ink:#303231;
+      --ink-soft:#555a55;
+      --paper:#f4f2ed;
+      --ivory:#faf9f6;
+      --line:#d8d5cc;
+      --gold:#ae8e65;
+      --gold-light:#d7b78c;
+      --dark:#303030;
+      --wide:1260px;
+    }
+    * {box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body.ap-contact{margin:0;min-width:320px;background:var(--paper);color:var(--ink);font-family:'Montserrat',Arial,sans-serif}
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+    .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-  <!-- Encabezado -->
-  <header class="header-container" role="banner">
-    <div style="display: flex; align-items: center;">
-      <img src="images/logo.png" alt="Logo Arquitectura & Prefabricados" class="logo" />
-      <h1 class="header-title">ARQUITECTURA & PREFABRICADOS</h1>
+    /* MISMO ENCABEZADO QUE SERVICIOS */
+    .ap-contact .ap-header{position:relative;z-index:20;width:100%;background:#303030;color:white}
+    .ap-contact .ap-header-inner{width:100%;max-width:1920px;min-height:116px;margin:0 auto;padding:14px 38px;display:flex;align-items:center;justify-content:space-between;gap:clamp(14px,1.5vw,30px)}
+    .ap-contact .ap-brand{display:flex;align-items:center;gap:17px;flex:0 1 auto;min-width:0;text-decoration:none;color:#fff}
+    .ap-contact .ap-logo{display:block;width:76px;height:76px;object-fit:contain;flex-shrink:0;opacity:.68;filter:grayscale(100%) invert(1) contrast(1.8);mix-blend-mode:screen;transition:opacity .25s}
+    .ap-contact .ap-brand:hover .ap-logo{opacity:.88}
+    .ap-contact .ap-brand-name{margin:0;font-family:'Montserrat',sans-serif;font-size:clamp(1.35rem,2.15vw,2.65rem);font-weight:400;line-height:1.15;letter-spacing:.015em;color:white;white-space:nowrap}
+    .ap-contact .ap-header-divider{width:4px;height:78px;flex:0 0 4px;background:rgba(255,255,255,.30);border-radius:3px}
+    .ap-contact .ap-nav{display:flex;align-items:center;justify-content:flex-end;flex:0 0 auto;gap:clamp(16px,2.2vw,42px);margin-left:auto}
+    .ap-contact .ap-nav a{display:inline-block;padding:10px 2px;font-family:'Montserrat',sans-serif;font-size:clamp(1rem,1.3vw,1.55rem);font-weight:400;line-height:1.3;color:#fff;text-decoration:none;white-space:nowrap}
+    .ap-contact .ap-nav a:hover,.ap-contact .ap-nav a:focus-visible{color:#e7c79c}
+    .ap-contact .ap-nav a[aria-current="page"]{color:#e7c79c}
+
+    /* PORTADA */
+    .c-hero{position:relative;isolation:isolate;overflow:hidden;background:#2d302f;color:#fff}
+    .c-hero::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 83% 55%,rgba(198,184,154,.14),transparent 55%),repeating-linear-gradient(90deg,transparent 0,transparent 79px,rgba(255,255,255,.024) 80px,transparent 81px),repeating-linear-gradient(0deg,transparent 0,transparent 79px,rgba(255,255,255,.024) 80px,transparent 81px)}
+    .c-hero::after{content:"";position:absolute;z-index:-1;width:480px;height:480px;right:-170px;top:-310px;border:1px solid rgba(215,183,140,.20);border-radius:50%}
+    .c-hero-inner{max-width:var(--wide);margin:auto;padding:67px 34px 74px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(230px,.65fr);align-items:center;gap:clamp(38px,6vw,100px)}
+    .c-eyebrow{display:inline-flex;align-items:center;gap:13px;color:var(--gold-light);font-size:.71rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;line-height:1.5}
+    .c-eyebrow::before{content:"";display:block;width:32px;height:1px;background:var(--gold-light);flex:none}
+    .c-hero h1{margin:20px 0 19px;max-width:700px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(3rem,4.5vw,4.55rem);line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
+    .c-hero h1 em{font-weight:500;font-style:normal;color:#d7bf9f}
+    .c-hero-text{margin:0;max-width:630px;color:#e0dfda;font-size:.94rem;line-height:1.9}
+    .c-hero-stamp{justify-self:end;align-self:center;width:min(100%,280px);padding:19px 0 19px 25px;border-left:1px solid rgba(255,255,255,.22)}
+    .c-hero-stamp span{display:block;color:#d8c5a8;font-size:.63rem;letter-spacing:.17em;font-weight:600;text-transform:uppercase}
+    .c-hero-stamp p{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.95rem;font-weight:500;line-height:1.07;margin:13px 0 0}
+
+    /* CONTACTO + FORMULARIO */
+    .c-section{position:relative;padding:85px 0 89px;background:linear-gradient(125deg,#f2f0ea 0%,#eceae4 100%)}
+    .c-section::before{content:"";pointer-events:none;position:absolute;inset:0;opacity:.10;background-image:radial-gradient(#77736b .5px,transparent .7px);background-size:9px 9px}
+    .c-wrap{position:relative;max-width:var(--wide);margin:auto;padding:0 34px}
+    .c-layout{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(34px,6vw,85px);align-items:start}
+    .c-section-tag{font-weight:700;font-size:.68rem;letter-spacing:.19em;color:#92734e;text-transform:uppercase}
+    .c-info h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.55rem,3.8vw,3.9rem);line-height:1.02;font-weight:600;letter-spacing:-.015em;margin:18px 0 20px;text-wrap:balance}
+    .c-info-lead{font-size:.91rem;color:#565a56;line-height:1.9;max-width:460px;margin:0 0 27px}
+    .c-whatsapp{display:inline-flex;justify-content:center;align-items:center;gap:11px;padding:15px 20px;min-height:52px;border-radius:3px;background:#303b32;color:#fff;font-size:.80rem;font-weight:600;text-decoration:none;transition:transform .2s,background .2s}
+    .c-whatsapp:hover{background:#48614c;transform:translateY(-2px)}
+    .c-whatsapp svg{width:19px;height:19px;fill:currentColor;flex:none}
+    .c-contact-list{display:grid;gap:0;margin:43px 0 0;max-width:500px}
+    .c-contact-row{display:grid;grid-template-columns:43px minmax(0,1fr);column-gap:15px;align-items:start;padding:21px 0;border-top:1px solid #d2cec5}
+    .c-contact-icon{width:39px;height:39px;display:grid;place-items:center;border:1px solid #c9c1b6;color:#92734e}
+    .c-contact-icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+    .c-contact-text strong{display:block;font-size:.70rem;letter-spacing:.12em;text-transform:uppercase;color:#827259;margin-bottom:8px}
+    .c-contact-text a,.c-contact-text p{font-size:.87rem;line-height:1.7;color:#3f423d;margin:0;text-decoration:none;overflow-wrap:anywhere}
+    .c-contact-text a:hover{text-decoration:underline;text-underline-offset:3px}
+    .c-contact-text .c-extra{font-size:.75rem;color:#7d7c74;margin-top:5px}
+    .c-social{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+    .c-social a{text-decoration:none;padding:11px 15px;border:1px solid #c7c0b5;font-size:.76rem;font-weight:600;color:#54554f;transition:background .2s}
+    .c-social a:hover{background:#e4dfd5}
+
+    /* FORMULARIO SIN SERVIDOR: ABRE WHATSAPP */
+    .c-form-card{padding:36px 39px 37px;border:1px solid rgba(72,70,64,.15);background:#fbfaf7;box-shadow:0 16px 48px rgba(34,31,26,.055)}
+    .c-form-heading{padding-bottom:23px;border-bottom:1px solid #e0dcd3;margin-bottom:26px}
+    .c-form-heading .c-section-tag{font-size:.65rem}
+    .c-form-heading h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.65rem;font-weight:600;line-height:1;margin:11px 0 10px}
+    .c-form-heading p{font-size:.82rem;line-height:1.8;color:#646760;margin:0}
+    .c-fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:21px 16px}
+    .c-field{min-width:0;display:flex;flex-direction:column;gap:9px}
+    .c-field.full{grid-column:1 / -1}
+    .c-field label{font-size:.72rem;color:#4d4e48;font-weight:600;line-height:1.4}
+    .c-req{color:#99734d}
+    .c-field input,.c-field select,.c-field textarea{display:block;width:100%;min-width:0;padding:13px 14px;border:1px solid #d4d1c9;background:#fff;color:#333733;border-radius:2px;outline:none;min-height:48px;font-size:.83rem;transition:border-color .2s,box-shadow .2s}
+    .c-field input:focus,.c-field select:focus,.c-field textarea:focus{border-color:#b09165;box-shadow:0 0 0 3px rgba(176,145,101,.13)}
+    .c-field input::placeholder,.c-field textarea::placeholder{color:#888b84;opacity:1}
+    .c-field textarea{resize:vertical;min-height:128px;line-height:1.65}
+    .c-submit{width:100%;min-height:52px;display:flex;align-items:center;justify-content:center;gap:12px;margin-top:25px;padding:14px 20px;border:0;border-radius:3px;background:#343936;color:#fff;font-size:.83rem;font-weight:600;transition:background .2s,transform .2s}
+    .c-submit:hover{background:#60513e;transform:translateY(-1px)}
+    .c-submit span{font-size:1.2rem;line-height:1}
+    .c-privacy{font-size:.72rem;line-height:1.8;color:#787970;margin:16px 0 0}
+    .c-privacy strong{color:#66665e;font-weight:600}
+
+    /* MAPA */
+    .c-map-section{background:#f9f7f3;padding:77px 0 88px}
+    .c-map-header{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:26px}
+    .c-map-header h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.5rem,4vw,4rem);line-height:1.05;font-weight:600;margin:11px 0 0}
+    .c-map-header p{color:#686861;font-size:.87rem;line-height:1.8;max-width:400px;margin:0}
+    .c-map-figure{margin:0;position:relative;line-height:0;border:1px solid #d6d1c7;background:#e0dfda}
+    .c-map-figure iframe{width:100%;height:370px;border:0;display:block;filter:grayscale(.24)}
+    .c-map-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:18px}
+    .c-map-bottom p{margin:0;color:#696b65;font-size:.77rem;line-height:1.75}
+    .c-directions{display:inline-flex;min-height:43px;align-items:center;justify-content:center;padding:11px 17px;border:1px solid #333a35;color:#333a35;font-weight:600;font-size:.75rem;text-decoration:none;white-space:nowrap}
+    .c-directions:hover{background:#333a35;color:white}
+
+    .c-footer{background:#252625;color:#e5e4df;padding:28px 24px}
+    .c-footer-inner{max-width:var(--wide);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .c-footer p{margin:0;font-size:.76rem;line-height:1.8}
+    .c-footer nav{display:flex;gap:21px;flex-wrap:wrap}
+    .c-footer a{font-size:.77rem;color:#dac3a5;text-decoration:none}
+    .c-footer a:hover{text-decoration:underline}
+    @media (min-width:769px) and (max-width:1200px){
+      .ap-contact .ap-header-inner{flex-wrap:wrap;justify-content:center;gap:12px;padding:14px 25px}
+      .ap-contact .ap-brand-name{font-size:clamp(1.5rem,3vw,2.2rem)}
+      .ap-contact .ap-header-divider{display:none}
+      .ap-contact .ap-nav{width:100%;justify-content:center;margin-left:0;gap:32px}
+      .ap-contact .ap-nav a{font-size:1.15rem}
+    }
+    @media (max-width:1000px){
+      .c-layout{gap:30px;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr)}
+      .c-wrap{padding:0 26px}
+      .c-hero-inner{gap:28px;padding:55px 26px}
+      .c-form-card{padding:29px 25px}
+      .c-fields{grid-template-columns:1fr}
+    }
+    @media (max-width:768px){
+      .ap-contact .ap-header-inner{flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:14px 12px 10px;min-height:auto}
+      .ap-contact .ap-brand{width:100%;justify-content:center;gap:11px}
+      .ap-contact .ap-logo{width:52px;height:52px}
+      .ap-contact .ap-brand-name{font-size:clamp(.95rem,3.5vw,1.4rem);line-height:1.2;white-space:normal;text-align:left}
+      .ap-contact .ap-header-divider{display:none}
+      .ap-contact .ap-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;width:100%;margin:0;text-align:center}
+      .ap-contact .ap-nav a{font-size:clamp(.72rem,2.6vw,.9rem);padding:10px 2px}
+      .c-hero-inner{display:block;padding:46px 21px 48px}
+      .c-hero h1{font-size:clamp(2.62rem,9.7vw,3.65rem);line-height:1.02}
+      .c-hero-text{font-size:.87rem;line-height:1.85}
+      .c-hero-stamp{margin-top:28px;width:100%;padding:16px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.18)}
+      .c-hero-stamp p{font-size:1.55rem;margin-top:8px}
+      .c-section{padding:53px 0 65px}
+      .c-wrap{padding:0 20px}
+      .c-layout{grid-template-columns:1fr;gap:37px}
+      .c-info h2{font-size:clamp(2.55rem,9.2vw,3.25rem)}
+      .c-info-lead{font-size:.88rem;margin-bottom:23px}
+      .c-contact-list{margin-top:32px}
+      .c-contact-row{padding:17px 0}
+      .c-form-card{padding:28px 21px}
+      .c-form-heading h2{font-size:2.45rem}
+      .c-map-section{padding:54px 0 60px}
+      .c-map-header{display:block}
+      .c-map-header p{margin:13px 0 0}
+      .c-map-figure iframe{height:320px}
+      .c-map-bottom{display:block}
+      .c-directions{margin-top:15px}
+    }
+    @media (max-width:380px){
+      .ap-contact .ap-logo{width:45px;height:45px}
+      .ap-contact .ap-brand-name{font-size:.95rem}
+      .c-hero h1{font-size:2.48rem}
+      .c-form-card{padding:25px 16px}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body class="ap-contact">
+  <header class="ap-header">
+    <div class="ap-header-inner">
+      <a class="ap-brand" href="index.html" aria-label="Arquitectura y Prefabricados - Inicio">
+        <img src="images/logo.png" class="ap-logo" width="76" height="76" alt="Logotipo de Arquitectura y Prefabricados">
+        <span class="ap-brand-name">ARQUITECTURA Y PREFABRICADOS</span>
+      </a>
+      <div class="ap-header-divider" aria-hidden="true"></div>
+      <nav class="ap-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+      </nav>
     </div>
-    <nav role="navigation" aria-label="Menú principal">
-      <a href="index.html">Inicio</a>
-      <a href="productos.html">Productos</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html" aria-current="page">Contacto</a>
-    </nav>
   </header>
 
-  <!-- Coordina una reunión -->
   <main>
-    <section class="coordina-reunion" aria-labelledby="titulo-reunion">
-      <div class="info-reunion">
-        <h2 id="titulo-reunion">Coordina una reunión</h2>
-        <p>Nos encantaría acompañarte en cada paso para hacer realidad tu proyecto.</p>
-        <p>Ponte en contacto y recibe el asesoramiento que necesitas para resolver todas tus dudas.</p>
-      </div>
-
-      <form class="form-reunion" action="mailto:andre5125@yahoo.es" method="post" enctype="text/plain" aria-label="Formulario de contacto">
-        <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" name="nombre" placeholder="Nombre" required aria-required="true" />
-        
-        <label for="telefono">Teléfono</label>
-        <input id="telefono" type="tel" name="telefono" placeholder="Teléfono" required aria-required="true" />
-        
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" placeholder="Email" required aria-required="true" />
-        
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required aria-required="true"></textarea>
-        
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
-    <!-- Datos de contacto -->
-    <section class="contacto-info" aria-label="Datos de contacto">
-      <p><strong>Teléfonos:</strong> <a href="tel:+593992941294">0992941294</a> | <a href="tel:+59332405123">032405123</a></p>
-      <p><strong>Dirección:</strong> Av. Bolivariana y Víctor Hugo, Ambato, Tungurahua, Ecuador</p>
-      <p><strong>Email:</strong> <a href="mailto:andre5125@yahoo.es">andre5125@yahoo.es</a></p>
-    </section>
-
-    <!-- Redes sociales -->
-    <section class="redes-sociales" aria-label="Redes sociales">
-      <h2>Nuestras redes</h2>
-      <div class="iconos-redes">
-        <a href="https://www.facebook.com/arquitecturaprefabricados" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
-          <img src="images/facebook-icon.png" alt="Facebook" />
-        </a>
-        <a href="https://www.instagram.com/arquitecturayprefabricados" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
-          <img src="images/instagram-icon.png" alt="Instagram" />
-        </a>
-        <a href="https://wa.me/593992941294" target="_blank" aria-label="WhatsApp" rel="noopener noreferrer">
-          <img src="images/whatsapp-icon.png" alt="WhatsApp" />
-        </a>
+    <section class="c-hero" aria-labelledby="c-title">
+      <div class="c-hero-inner">
+        <div>
+          <span class="c-eyebrow">Estamos para atenderle</span>
+          <h1 id="c-title">Conversemos sobre <em>su próximo proyecto.</em></h1>
+          <p class="c-hero-text">Cada proyecto comienza con una conversación. Cuéntenos qué necesita y le orientaremos sobre las alternativas de diseño, gestión o construcción que mejor respondan a sus requerimientos.</p>
+        </div>
+        <div class="c-hero-stamp" aria-label="Servicios disponibles">
+          <span>Arquitectura y Prefabricados</span>
+          <p>Gestión.<br>Diseño.<br>Construcción.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Mapa de ubicación -->
-    <section class="mapa-ubicacion" aria-label="Mapa de ubicación">
-      <h2 class="titulo-mapa">ESTAMOS AQUÍ..!</h2>
-      <div class="mapa-container">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4949.7096600957575!2d-78.61614592414165!3d-1.2603164356001315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d383b1e77d784b%3A0x44912b3ceca9a579!2sARQUITECTURA%20Y%20PREFABRICADOS!5e1!3m2!1ses!2sec!4v1751487892799!5m2!1ses!2sec" 
-          width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade" title="Ubicación Arquitectura y Prefabricados en Ambato">
-        </iframe>
+    <section class="c-section" id="consulta" aria-label="Información y formulario de contacto">
+      <div class="c-wrap">
+        <div class="c-layout">
+          <div class="c-info">
+            <span class="c-section-tag">Contacto directo</span>
+            <h2>Hablemos de lo que tiene en mente.</h2>
+            <p class="c-info-lead">Ya sea una vivienda nueva, una ampliación, un cerramiento, un trámite municipal o un producto prefabricado, estamos a su disposición para conocer su proyecto.</p>
+            <a class="c-whatsapp" href="https://wa.me/593992941294?text=Buenos%20d%C3%ADas.%20Deseo%20informaci%C3%B3n%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Escribir a Arquitectura y Prefabricados por WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.03 2C6.52 2 2.05 6.45 2.05 11.95c0 1.75.46 3.45 1.34 4.94L2 22l5.26-1.38a10.02 10.02 0 0 0 4.77 1.22h.01c5.5 0 9.96-4.45 9.97-9.96A9.93 9.93 0 0 0 12.03 2Zm0 18.15a8.25 8.25 0 0 1-4.21-1.15l-.3-.17-3.12.82.83-3.04-.2-.31a8.23 8.23 0 1 1 7 3.85Zm4.52-6.16c-.25-.13-1.48-.73-1.71-.81-.23-.08-.39-.13-.56.13s-.64.81-.79.97c-.14.17-.29.19-.54.06-.25-.12-1.05-.38-2-1.23-.74-.66-1.24-1.48-1.38-1.73-.14-.25-.02-.39.11-.52.11-.11.25-.29.38-.44.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.44-.07-.13-.56-1.34-.77-1.83-.2-.47-.41-.4-.56-.41h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.08s.89 2.42 1.02 2.59c.12.17 1.74 2.66 4.22 3.74.59.26 1.06.42 1.42.54.59.18 1.13.15 1.55.09.47-.07 1.48-.61 1.69-1.2.21-.59.21-1.1.15-1.2-.06-.11-.23-.17-.48-.3Z"/></svg>
+              Escribir por WhatsApp <span aria-hidden="true">↗</span>
+            </a>
+
+            <div class="c-contact-list">
+              <div class="c-contact-row">
+                <span class="c-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6 19.7 19.7 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7.1 10a16 16 0 0 0 6.9 6.9l1.5-1.9a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2Z"/></svg></span>
+                <div class="c-contact-text"><strong>Teléfonos</strong><a href="tel:+593992941294">099 294 1294</a> · <a href="tel:+59332405123">(03) 240 5123</a><p class="c-extra">Llámenos o envíenos un mensaje.</p></div>
+              </div>
+              <div class="c-contact-row">
+                <span class="c-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span>
+                <div class="c-contact-text"><strong>Correo electrónico</strong><a href="mailto:andre5125@yahoo.es">andre5125@yahoo.es</a><p class="c-extra">Para consultas y documentación de proyectos.</p></div>
+              </div>
+              <div class="c-contact-row">
+                <span class="c-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+                <div class="c-contact-text"><strong>Ubicación</strong><p>Av. Bolivariana y Víctor Hugo<br>Ambato, Tungurahua, Ecuador</p><p class="c-extra">Le sugerimos coordinar su visita previamente.</p></div>
+              </div>
+            </div>
+            <nav class="c-social" aria-label="Redes sociales">
+              <a href="https://www.facebook.com/arquitecturaprefabricados" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+              <a href="https://www.instagram.com/arquitecturayprefabricados" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+            </nav>
+          </div>
+
+          <div class="c-form-card">
+            <div class="c-form-heading">
+              <span class="c-section-tag">Cuéntenos su proyecto</span>
+              <h2>Envíenos su consulta.</h2>
+              <p>Complete los datos principales. Al continuar, se abrirá WhatsApp con su mensaje preparado.</p>
+            </div>
+            <form id="contact-form">
+              <div class="c-fields">
+                <div class="c-field">
+                  <label for="nombre">Nombre <span class="c-req" aria-hidden="true">*</span></label>
+                  <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Su nombre" maxlength="90" required>
+                </div>
+                <div class="c-field">
+                  <label for="telefono">Teléfono <span class="c-req" aria-hidden="true">*</span></label>
+                  <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="099 000 0000" maxlength="32" required>
+                </div>
+                <div class="c-field full">
+                  <label for="servicio">Servicio de interés <span class="c-req" aria-hidden="true">*</span></label>
+                  <select id="servicio" name="servicio" required>
+                    <option value="" disabled selected>Seleccione el servicio que necesita</option>
+                    <option>Gestión y Tramitación Municipal</option>
+                    <option>Diseño Arquitectónico e Ingeniería</option>
+                    <option>Construcción de Obras Civiles</option>
+                    <option>Construcción de Cerramientos</option>
+                    <option>Cerramientos Frontales Personalizados</option>
+                    <option>Productos Prefabricados</option>
+                    <option>Otra consulta</option>
+                  </select>
+                </div>
+                <div class="c-field">
+                  <label for="lugar">Ubicación del proyecto <span class="visually-hidden">(opcional)</span></label>
+                  <input id="lugar" name="lugar" type="text" placeholder="Ciudad o sector (opcional)" maxlength="120">
+                </div>
+                <div class="c-field">
+                  <label for="email">Correo electrónico <span class="visually-hidden">(opcional)</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="Opcional" maxlength="150">
+                </div>
+                <div class="c-field full">
+                  <label for="mensaje">¿Qué necesita realizar? <span class="c-req" aria-hidden="true">*</span></label>
+                  <textarea id="mensaje" name="mensaje" placeholder="Describa brevemente el tipo de proyecto, dimensiones aproximadas o el trámite que necesita." maxlength="1500" required></textarea>
+                </div>
+              </div>
+              <button class="c-submit" type="submit">Preparar consulta por WhatsApp <span aria-hidden="true">↗</span></button>
+              <p class="c-privacy"><strong>Importante:</strong> el formulario no envía ni almacena información en esta página. Abrirá WhatsApp con el texto preparado para que usted decida enviarlo.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-map-section" id="ubicacion" aria-labelledby="map-title">
+      <div class="c-wrap">
+        <div class="c-map-header">
+          <div><span class="c-section-tag">Ubicación de nuestra oficina</span><h2 id="map-title">Visítenos.</h2></div>
+          <p>Si desea conversar sobre su proyecto personalmente, escríbanos para coordinar una reunión.</p>
+        </div>
+        <figure class="c-map-figure">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4949.7096600957575!2d-78.61614592414165!3d-1.2603164356001315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d383b1e77d784b%3A0x44912b3ceca9a579!2sARQUITECTURA%20Y%20PREFABRICADOS!5e1!3m2!1ses!2sec!4v1751487892799!5m2!1ses!2sec" width="100%" height="370" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicación de Arquitectura y Prefabricados en Ambato" allowfullscreen></iframe>
+          <figcaption class="visually-hidden">Ubicación de la oficina de Arquitectura y Prefabricados.</figcaption>
+        </figure>
+        <div class="c-map-bottom">
+          <p>Av. Bolivariana y Víctor Hugo · Ambato, Tungurahua</p>
+          <a class="c-directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=-1.2603164356001315%2C-78.61614592414165" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a>
+        </div>
       </div>
     </section>
   </main>
 
+  <footer class="c-footer">
+    <div class="c-footer-inner">
+      <p>© 2026 Arquitectura y Prefabricados. Todos los derechos reservados.</p>
+      <nav aria-label="Enlaces del pie de página">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="https://www.facebook.com/arquitecturaprefabricados" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/arquitecturayprefabricados" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // GitHub Pages es un sitio estático: el formulario genera el mensaje para WhatsApp.
+    (function () {
+      'use strict';
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const val = id => document.getElementById(id).value.trim();
+        const nombre = val('nombre');
+        const telefono = val('telefono');
+        const servicio = val('servicio');
+        const lugar = val('lugar');
+        const email = val('email');
+        const mensaje = val('mensaje');
+        const parts = [
+          'Buenos días. Deseo realizar una consulta a Arquitectura y Prefabricados.',
+          '',
+          'Nombre: ' + nombre,
+          'Teléfono: ' + telefono,
+          'Servicio: ' + servicio
+        ];
+        if (lugar) parts.push('Ubicación del proyecto: ' + lugar);
+        if (email) parts.push('Correo: ' + email);
+        parts.push('', 'Mi requerimiento:', mensaje);
+        const url = 'https://wa.me/593992941294?text=' + encodeURIComponent(parts.join('\n'));
+        const nuevaPestana = window.open(url, '_blank');
+        if (nuevaPestana) nuevaPestana.opener = null;
+        else window.location.href = url;
+      });
+    })();
+  </script>
 </body>
 </html>
