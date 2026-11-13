@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Servicios de Arquitectura, Permisos y Construcción en Ambato | Arquitectura y Prefabricados</title>
-  <meta name="description" content="Gestión de permisos municipales, subdivisión de terrenos, diseño arquitectónico, estructural, interior e instalaciones y construcción de obras civiles en Ambato.">
+  <title>Servicios de Arquitectura, Permisos y Construcción | Arquitectura y Prefabricados</title>
+  <meta name="description" content="Arquitectura y Prefabricados: gestión de permisos en Ambato, diseño arquitectónico e ingeniería, construcción de obras civiles y cerramientos perimetrales a medida.">
   <meta name="author" content="Arquitectura y Prefabricados">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://arquitecturayprefabricados.github.io/mipagina/servicios.html">
@@ -14,9 +14,9 @@
   <meta property="og:locale" content="es_EC">
   <meta property="og:site_name" content="Arquitectura y Prefabricados">
   <meta property="og:title" content="Servicios | Arquitectura y Prefabricados">
-  <meta property="og:description" content="Gestión, diseño arquitectónico e ingeniería y construcción de obras civiles para proyectos residenciales, comerciales e industriales.">
+  <meta property="og:description" content="Gestión municipal, diseño e ingeniería, construcción de obras civiles y cerramientos tradicionales y personalizados.">
   <meta property="og:url" content="https://arquitecturayprefabricados.github.io/mipagina/servicios.html">
-  <meta property="og:image" content="https://arquitecturayprefabricados.github.io/mipagina/images/logo.png">
+  <meta property="og:image" content="https://arquitecturayprefabricados.github.io/mipagina/images/diseno-arquitectonico.png">
   <meta name="theme-color" content="#303030">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +61,7 @@
     button { font: inherit; }
     img { display: block; max-width: 100%; }
     :focus-visible { outline: 2px solid var(--ap-gold); outline-offset: 4px; }
-    #gestion, #diseno, #construccion { scroll-margin-top: 20px; }
+    #gestion, #diseno, #construccion, #cerramientos { scroll-margin-top: 20px; }
 
     /* ENCABEZADO: dimensiones y estilos tomados del index aprobado. */
 .ap-services .ap-header { position: relative; z-index: 20; width: 100%; background: #303030; color: white; }
@@ -86,17 +86,17 @@
       font-weight: 400; line-height: 1.3; color: white; text-decoration: none; white-space: nowrap; }
     .ap-services .ap-nav a:hover, .ap-services .ap-nav a:focus-visible { color: #e7c79c; }
 
-    /* Presentación editorial: sin imágenes añadidas en esta etapa. */
+    /* Presentación editorial de Servicios. */
     .s-hero { position: relative; isolation: isolate; color: #fff; background: #2c302f; overflow: hidden; }
     .s-hero::before { content: ''; position: absolute; inset: 0; z-index:-2; background:
       radial-gradient(ellipse at 88% 24%,rgba(196,183,158,.13),transparent 48%),
       repeating-linear-gradient(90deg,transparent 0,transparent 78px,rgba(255,255,255,.027) 79px,transparent 80px),
       repeating-linear-gradient(0deg,transparent 0,transparent 78px,rgba(255,255,255,.027) 79px,transparent 80px); }
     .s-hero::after { content:''; position: absolute; right: -165px; top: -250px; width: 650px; height: 650px; border: 1px solid rgba(216,195,163,.14); border-radius: 50%; transform: rotate(-25deg); z-index:-1; }
-    .s-hero-inner { max-width: var(--ap-wide); margin: 0 auto; padding: 84px 34px 78px; display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(270px, .82fr); gap: 55px; align-items:center; }
+    .s-hero-inner { max-width: var(--ap-wide); margin: 0 auto; padding: 69px 34px 66px; display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(270px, .82fr); gap: 55px; align-items:center; }
     .s-kicker { display: inline-flex; align-items:center; gap: 12px; font-size: .74rem; letter-spacing: .24em; font-weight:600; color: var(--ap-gold-light); text-transform:uppercase; line-height:1.5; }
     .s-kicker::before { content:''; width: 34px; height: 1px; background: var(--ap-gold-light); flex: 0 0 auto; }
-    .s-hero h1 { font-family: 'Cormorant Garamond',Georgia,serif; font-size:clamp(3.6rem,6.4vw,6.5rem); font-weight:500; letter-spacing:-.018em; line-height:.95; margin:23px 0 24px; }
+    .s-hero h1 { font-family: 'Cormorant Garamond',Georgia,serif; font-size:clamp(3.0rem,4.7vw,4.8rem); font-weight:500; letter-spacing:-.018em; line-height:.95; margin:18px 0 22px; }
     .s-hero h1 span { color: #d7bf9f; }
     .s-hero-lead { max-width: 620px; font-size: 1rem; line-height:1.94; color: #e1e0db; margin:0 0 27px; }
     .s-hero-actions { display:flex; flex-wrap: wrap; align-items:center; gap: 12px; }
@@ -115,36 +115,29 @@
     .s-side-row .s-arrow { margin-left:auto; font-size:1.15rem; color:#c6b095; }
 
     /* Contenedores, tipografía y áreas reutilizables */
-    .s-section { position:relative; padding: 90px 0 91px; }
+    .s-section { position:relative; padding: 78px 0 82px; }
     .s-section:nth-of-type(even) { background: var(--ap-paper); }
     .s-section::before { content:''; position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(rgba(50,48,45,.16) .7px,transparent 1px); background-size:17px 17px; opacity:.075; }
     .s-wrap { position:relative; max-width:var(--ap-wide); padding:0 34px; margin:0 auto; }
     .s-section-head { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,.85fr); gap:clamp(30px,5vw,85px); align-items:center; }
-    .s-section-head.s-flip .s-media-slot { order:-1; }
+    .s-section-head.s-flip .s-photo-frame { order:-1; }
     .s-index { display:inline-flex; align-items:center; gap:11px; margin:0 0 16px; font-size:.73rem; font-weight:600; letter-spacing:.17em; color:#97744e; text-transform:uppercase; }
     .s-index span { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.55rem; font-weight:600; letter-spacing:0; }
-    .s-section h2 { font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:clamp(2.65rem,4.6vw,4.55rem); line-height:1.02; letter-spacing:-.012em; margin:0 0 17px; color:#303230; text-wrap:balance; }
+    .s-section h2 { font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:clamp(2.45rem,3.45vw,3.55rem); line-height:1.02; letter-spacing:-.012em; margin:0 0 17px; color:#303230; text-wrap:balance; }
     .s-lede { max-width:660px; margin:0 0 18px; font-size:.97rem; line-height:1.92; color:#535752; }
     .s-meta-line { width:76px; height:2px; background:var(--ap-gold); margin:24px 0; }
     .s-photo-note { margin:8px 0 0; font-size:.76rem; line-height:1.7; color:#81817b; }
     .s-photo-note strong { color:#6e675b; }
 
-    /* Lugares preparados para incorporar fotografías más adelante */
-    .s-media-slot { position:relative; display:flex; align-items:center; justify-content:center; aspect-ratio: 5 / 4; min-width:0; border:1px solid #c9c6bc; background:
-      linear-gradient(145deg,rgba(255,255,255,.46),rgba(217,214,207,.32)),
-      repeating-linear-gradient(90deg,transparent 0,transparent 38px,rgba(115,111,102,.06) 39px,transparent 40px),
-      repeating-linear-gradient(0deg,transparent 0,transparent 38px,rgba(115,111,102,.06) 39px,transparent 40px);
-      overflow:hidden; isolation:isolate; }
-    .s-media-slot::before, .s-media-slot::after { content:''; position:absolute; pointer-events:none; }
-    .s-media-slot::before { inset:19px; border:1px solid rgba(72,68,61,.16); }
-    .s-media-slot::after { width:44%; height:44%; left:28%; top:28%; transform:rotate(45deg); border:1px solid rgba(118,108,91,.18); }
-    .s-media-slot-label { position:relative; display:grid; gap:13px; place-items:center; z-index:1; padding:25px; text-align:center; }
-    .s-media-slot-label .s-symbol { display:flex; align-items:center; justify-content:center; width:60px; height:60px; border:1px solid rgba(103,96,83,.42); color:#806f57; font-family:'Cormorant Garamond',Georgia,serif; font-size:2.1rem; background:rgba(249,247,241,.58); }
-    .s-media-slot-label strong { display:block; font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; line-height:1.6; color:#746c60; }
-    .s-media-slot-label small { display:block; font-size:.72rem; font-weight:400; color:#7d7970; line-height:1.5; }
-    .s-corner { position:absolute; font-size:.64rem; letter-spacing:.18em; color:#9d907d; font-weight:500; }
-    .s-corner.top { top:31px; left:31px; }
-    .s-corner.bottom { right:30px; bottom:28px; }
+    /* Fotografías de proyectos: integración real, sin recuadros artificiales */
+    .s-photo-frame { position:relative; margin:0; width:100%; min-width:0; }
+    .s-photo-link { display:block; position:relative; overflow:hidden; aspect-ratio:16 / 10; background:#d5d1c9; }
+    .s-photo-link img { width:100%; height:100%; object-fit:cover; object-position:center; transition:transform .45s ease; }
+    .s-photo-link:hover img { transform:scale(1.025); }
+    .s-photo-label { display:flex; align-items:baseline; justify-content:space-between; gap:15px; padding:13px 0 0;
+      border-top:2px solid #b09670; margin-top:12px; color:#665f54; font-size:.70rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; line-height:1.6; }
+    .s-photo-label span:last-child { color:#917a5a; font-size:.67rem; white-space:nowrap; }
+    .s-photo-caption { font-size:.77rem; color:#79766e; line-height:1.7; margin:7px 0 0; }
 
     /* Grupos de contenidos: ordenados, ligeros y fáciles de recorrer */
     .s-group-title { display:flex; align-items:center; gap:14px; margin:52px 0 22px; font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#625743; }
@@ -190,6 +183,61 @@
     .s-footer a { color:#dac3a5; font-size:.77rem; text-decoration:none; }
     .s-footer nav { display:flex; flex-wrap:wrap; gap:21px; }
 
+
+    /* Cerramientos: sección comercial propia, dentro de Construcción */
+    .s-more-link { margin:25px 0 0; font-size:.86rem; line-height:1.7; color:#565a54; }
+    .s-more-link a { color:#806343; font-weight:700; text-underline-offset:4px; }
+    .s-fences { background:#e8e6e0; position:relative; padding:86px 0 93px; }
+    .s-fences::before { content:''; position:absolute; inset:0; pointer-events:none; opacity:.075; background-image:radial-gradient(rgba(56,55,53,.35) .8px,transparent 1px); background-size:12px 12px; }
+    .s-fences-header { position:relative; max-width:930px; margin-bottom:38px; }
+    .s-fences h2 { font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(2.5rem,3.65vw,3.75rem); font-weight:600; letter-spacing:-.01em; line-height:1.08; margin:0 0 18px; }
+    .s-fences h3 { font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.9rem,2.8vw,2.8rem); line-height:1.1; font-weight:600; margin:10px 0 18px; }
+    .s-fences p { line-height:1.85; }
+    .s-fences-intro { position:relative; display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); gap:clamp(28px,5.1vw,72px); align-items:center; margin-bottom:50px; }
+    .s-fence-photo .s-photo-link { aspect-ratio:5 / 4; }
+    .s-fence-photo .s-photo-link img { object-position:50% 50%; }
+    .s-fences-details { max-width:590px; }
+    .s-fences-details p { color:#535750; font-size:.91rem; margin:0 0 15px; }
+    .s-small-label { display:block; font-size:.71rem; font-weight:700; letter-spacing:.18em; color:#9a784e; text-transform:uppercase; }
+    .s-check-list { margin:18px 0 0; padding:0; list-style:none; display:grid; gap:11px; }
+    .s-check-list li { position:relative; padding-left:24px; font-size:.86rem; line-height:1.65; color:#515650; }
+    .s-check-list li::before { content:'✓'; position:absolute; left:0; color:#90704c; font-weight:700; }
+    .s-prices { position:relative; padding:33px 38px 35px; background:#f8f6f0; border:1px solid rgba(60,55,45,.14); }
+    .s-prices-top { display:flex; justify-content:space-between; align-items:center; gap:26px; padding-bottom:22px; }
+    .s-prices-top h3 { margin:8px 0; }
+    .s-prices-top p { font-size:.86rem; color:#666960; margin:0; }
+    .s-price-hero { display:grid; justify-items:end; flex:0 0 auto; color:#94734e; line-height:1; }
+    .s-price-hero small { font-size:.70rem; font-weight:600; line-height:1.45; letter-spacing:.08em; }
+    .s-price-hero strong { font-size:clamp(2.5rem,4.5vw,4.1rem); letter-spacing:-.055em; }
+    .s-price-hero strong span { font-size:1.1rem; letter-spacing:0; font-weight:600; }
+    .s-price-table { border-top:1px solid #d5d0c6; border-bottom:1px solid #d5d0c6; margin:12px 0 25px; }
+    .s-price-row { display:grid; grid-template-columns:minmax(0,1fr) minmax(115px, .25fr); gap:12px; align-items:center; padding:14px 4px; border-top:1px solid #e1ded7; font-size:.85rem; color:#41443f; }
+    .s-price-row:first-child { border-top:0; }
+    .s-price-row strong, .s-price-row span:last-child { text-align:right; }
+    .s-price-row strong { font-size:1rem; color:#765d3d; }
+    .s-price-row-head { text-transform:uppercase; letter-spacing:.10em; color:#79756b; font-size:.66rem; font-weight:700; }
+    .s-permit-note { display:flex; gap:16px; padding:18px 22px; border-left:3px solid #a78a63; background:#eeebe3; }
+    .s-permit-note strong { font-size:.87rem; color:#3d4039; }
+    .s-permit-note p { font-size:.77rem; color:#60625c; margin:6px 0 0; line-height:1.75; }
+    .s-permit-icon { border:1px solid #ac8c62; border-radius:50%; display:grid; place-items:center; flex:0 0 26px; width:26px; height:26px; color:#92734d; font-weight:700; }
+    .s-price-fine { font-size:.74rem; color:#737069; margin:18px 0 24px; }
+    .s-fence-customize { position:relative; margin:43px 0 56px; padding:27px 0 0; border-top:1px solid #c9c5bc; }
+    .s-fence-customize h3 { font-size:clamp(1.95rem,2.55vw,2.65rem); }
+    .s-fence-customize > p { font-size:.88rem; color:#5e6159; margin:0 0 19px; }
+    .s-custom-tags { display:flex; flex-wrap:wrap; gap:10px; }
+    .s-custom-tags span { padding:11px 16px; font-size:.74rem; font-weight:600; border:1px solid #c8c4b9; background:rgba(255,255,255,.34); color:#5f6058; }
+    .s-fence-customize .s-custom-small { margin:13px 0 0; font-size:.75rem; color:#77746e; }
+    .s-custom-front { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.03fr); gap:clamp(28px,4.8vw,65px); padding:50px 0 0; border-top:1px solid #c9c5bc; align-items:center; }
+    .s-custom-front-text > p { font-size:.87rem; color:#575a54; margin:0 0 13px; }
+    .s-custom-front h3 { font-size:clamp(2.1rem,3.2vw,3.15rem); }
+    .s-custom-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; margin:26px 0; }
+    .s-custom-steps div { border-top:2px solid #b39a76; padding-top:13px; display:grid; gap:9px; }
+    .s-custom-steps b { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.5rem; color:#866945; }
+    .s-custom-steps span { color:#565951; font-size:.71rem; line-height:1.55; font-weight:600; }
+    .s-custom-front .s-custom-pricing { margin-bottom:21px; font-size:.79rem; }
+    .s-custom-photo .s-photo-link { aspect-ratio:16 / 10; }
+    .s-custom-photo .s-photo-link img { object-position:center; }
+
     /* Adaptación: mantener cabecera idéntica al inicio */
     @media (min-width: 769px) and (max-width: 1200px) {
       .ap-services .ap-header-inner { flex-wrap:wrap; justify-content:center; gap:12px; padding:14px 25px; }
@@ -207,8 +255,10 @@
       .s-side-row strong { font-size:.81rem; }
       .s-side-row .s-arrow { display:none; }
       .s-section-head { grid-template-columns:1fr; gap:26px; }
-      .s-section-head.s-flip .s-media-slot { order:initial; }
-      .s-media-slot { max-width:740px; aspect-ratio:16 / 9; }
+      .s-section-head.s-flip .s-photo-frame { order:initial; }
+      .s-photo-frame { max-width:740px; }
+      .s-fences-intro, .s-custom-front { grid-template-columns:1fr; gap:29px; }
+      .s-fence-photo { max-width:670px; }
       .s-cards, .s-type-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .s-final-inner { align-items:flex-start; flex-direction:column; }
     }
@@ -222,16 +272,32 @@
       .ap-services .ap-nav a { font-size:clamp(.72rem,2.6vw,.9rem); padding:10px 2px; }
 
       .s-hero-inner { padding:45px 21px 34px; gap:28px; }
-      .s-hero h1 { font-size:clamp(3.35rem,14vw,4.8rem); }
+      .s-hero h1 { font-size:clamp(2.9rem,10.5vw,4.05rem); }
       .s-hero-lead { font-size:.91rem; line-height:1.82; }
       .s-hero-side { grid-template-columns:1fr; gap:0; }
       .s-side-row { padding:11px 0; }
       .s-side-row strong { font-size:.88rem; }
       .s-section { padding:58px 0 65px; }
       .s-wrap { padding:0 20px; }
-      .s-section h2 { font-size:clamp(2.5rem,10.5vw,3.6rem); }
+      .s-section h2 { font-size:clamp(2.35rem,8.8vw,3.2rem); }
       .s-lede { font-size:.9rem; line-height:1.82; }
-      .s-media-slot { aspect-ratio:5 / 4; }
+      .s-photo-link { aspect-ratio:16 / 10; }
+      .s-fence-photo .s-photo-link { aspect-ratio:5 / 4; }
+      .s-fences { padding:58px 0 66px; }
+      .s-fences h2 { font-size:clamp(2.25rem,8.7vw,3.15rem); }
+      .s-fences h3 { font-size:clamp(1.85rem,7.3vw,2.55rem); }
+      .s-prices { padding:22px 19px; }
+      .s-prices-top { align-items:flex-start; flex-direction:column; gap:10px; }
+      .s-price-hero { justify-items:start; }
+      .s-price-row { grid-template-columns:minmax(0,1fr) 100px; }
+      .s-permit-note { padding:16px; }
+      .s-fence-customize { margin:36px 0 39px; }
+      .s-custom-front { padding-top:35px; }
+      .s-custom-front h3 { font-size:clamp(2.1rem,8.4vw,3.1rem); }
+      .s-custom-steps { gap:8px; }
+      .s-custom-steps span { font-size:.64rem; }
+      .s-photo-label { font-size:.61rem; letter-spacing:.045em; }
+      .s-photo-label span:last-child { font-size:.59rem; }
       .s-cards, .s-two-column, .s-type-grid { grid-template-columns:1fr; }
       .s-card { padding:24px 22px; }
       .s-design-card { padding:22px 15px; }
@@ -245,7 +311,7 @@
     @media (max-width: 380px) {
       .ap-services .ap-logo { width:45px; height:45px; }
       .ap-services .ap-brand-name { font-size:.95rem; }
-      .s-hero h1 { font-size:3.05rem; }
+      .s-hero h1 { font-size:2.72rem; }
       .s-kicker { font-size:.63rem; letter-spacing:.13em; }
       .s-card h3 { font-size:1.62rem; }
       .s-process { flex-direction:column; }
@@ -281,19 +347,19 @@
     <section class="s-hero" aria-labelledby="s-hero-title">
       <div class="s-hero-inner">
         <div>
-          <span class="s-kicker">SERVICIOS PROFESIONALES · AMBATO</span>
+          <span class="s-kicker">SERVICIOS PROFESIONALES</span>
           <h1 id="s-hero-title">De la idea <span>a la obra.</span></h1>
           <p class="s-hero-lead">
             Gestión de trámites municipales, diseño arquitectónico e ingeniería y construcción de obras civiles.
-            Tres áreas de trabajo para acompañar su proyecto desde su planificación hasta su ejecución.
+            Servicios coordinados para acompañar su proyecto desde la planificación hasta la ejecución.
           </p>
           <div class="s-hero-actions">
             <a class="s-btn s-btn-primary" href="#gestion">Conocer nuestros servicios ↘</a>
             <a class="s-btn s-btn-outline" href="https://wa.me/593992941294?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Arquitectura%20y%20Prefabricados.%20Mi%20proyecto%20es%3A" target="_blank" rel="noopener noreferrer">Consultar un proyecto ↗</a>
           </div>
         </div>
-        <nav class="s-hero-side" aria-label="Secciones de servicios">
-          <div class="s-hero-side-head">Nuestras áreas</div>
+        <nav class="s-hero-side" aria-label="Nuestros servicios">
+          <div class="s-hero-side-head">Nuestros servicios</div>
           <a href="#gestion" class="s-side-row"><em>01</em><strong>Gestión y Tramitación</strong><span class="s-arrow" aria-hidden="true">↗</span></a>
           <a href="#diseno" class="s-side-row"><em>02</em><strong>Diseño e Ingeniería</strong><span class="s-arrow" aria-hidden="true">↗</span></a>
           <a href="#construccion" class="s-side-row"><em>03</em><strong>Construcción</strong><span class="s-arrow" aria-hidden="true">↗</span></a>
@@ -313,11 +379,13 @@
             <p class="s-lede">Cada gestión se evalúa según la normativa vigente y las características particulares del proyecto.</p>
           </div>
           <div>
-            <div class="s-media-slot" role="img" aria-label="Espacio reservado para fotografía de planos y documentación municipal">
-              <span class="s-corner top">A / 01</span>
-              <div class="s-media-slot-label"><span class="s-symbol" aria-hidden="true">⌑</span><strong>Gestión</strong><small>Fotografía por incorporar<br>Planos · expedientes · trámites</small></div>
-              <span class="s-corner bottom">DOCUMENTACIÓN TÉCNICA</span>
-            </div>
+            <figure class="s-photo-frame">
+                          <a class="s-photo-link" href="images/gestion-permisos-municipales.png" target="_blank" rel="noopener" aria-label="Ampliar imagen de planos y gestión de permisos municipales">
+                            <img src="images/gestion-permisos-municipales.png" alt="Planos arquitectónicos y documentación técnica para trámites de permisos municipales" loading="eager" decoding="async" width="1672" height="941">
+                          </a>
+                          <figcaption class="s-photo-label"><span>Gestión municipal y documentación</span><span>01 / AP</span></figcaption>
+                        </figure>
+
           </div>
         </div>
 
@@ -374,11 +442,14 @@
             <p class="s-lede">Integramos arquitectura, estructura e instalaciones para lograr proyectos funcionales, coherentes y técnicamente viables.</p>
           </div>
           <div>
-            <div class="s-media-slot" role="img" aria-label="Espacio reservado para renders y planos arquitectónicos">
-              <span class="s-corner top">A / 02</span>
-              <div class="s-media-slot-label"><span class="s-symbol" aria-hidden="true">⌂</span><strong>Diseño</strong><small>Fotografía por incorporar<br>Planos · modelado 3D · renders</small></div>
-              <span class="s-corner bottom">ARQUITECTURA E INGENIERÍA</span>
-            </div>
+            <figure class="s-photo-frame">
+                          <a class="s-photo-link" href="images/diseno-arquitectonico.png" target="_blank" rel="noopener" aria-label="Ampliar visualización de proyecto arquitectónico residencial">
+                            <img src="images/diseno-arquitectonico.png" alt="Diseño arquitectónico de vivienda contemporánea con acabados de piedra, enlucido y carpintería" loading="lazy" decoding="async" width="1774" height="887">
+                          </a>
+                          <figcaption class="s-photo-label"><span>Diseño arquitectónico y visualización</span><span>02 / AP</span></figcaption>
+                          <p class="s-photo-caption">Visualización arquitectónica referencial del proyecto.</p>
+                        </figure>
+
           </div>
         </div>
 
@@ -415,11 +486,13 @@
             <p class="s-lede">Cada construcción se planifica de acuerdo con sus características técnicas, el presupuesto y el alcance contratado.</p>
           </div>
           <div>
-            <div class="s-media-slot" role="img" aria-label="Espacio reservado para fotografías reales de obras en ejecución">
-              <span class="s-corner top">A / 03</span>
-              <div class="s-media-slot-label"><span class="s-symbol" aria-hidden="true">▤</span><strong>Construcción</strong><small>Fotografía por incorporar<br>Obra gris · estructura · terminación</small></div>
-              <span class="s-corner bottom">EJECUCIÓN DE OBRA</span>
-            </div>
+            <figure class="s-photo-frame">
+                          <a class="s-photo-link" href="images/construccion-obras-civiles.png" target="_blank" rel="noopener" aria-label="Ampliar fotografía de obra civil en ejecución">
+                            <img src="images/construccion-obras-civiles.png" alt="Edificación de hormigón armado en construcción, con obra gris y elementos provisionales de obra" loading="lazy" decoding="async" width="1672" height="941">
+                          </a>
+                          <figcaption class="s-photo-label"><span>Ejecución de obra civil</span><span>03 / AP</span></figcaption>
+                        </figure>
+
           </div>
         </div>
 
@@ -450,9 +523,94 @@
         <div class="s-type-grid">
           <div class="s-type"><h3>Comercial</h3><p>Construcción y adecuación de locales, oficinas, plazas comerciales y establecimientos que requieren soluciones funcionales y seguras.</p></div>
           <div class="s-type"><h3>Industrial</h3><p>Galpones, bodegas, talleres, estructuras metálicas, cimentaciones y ampliaciones de instalaciones productivas.</p></div>
-          <div class="s-type"><h3>Obras complementarias</h3><p>Cerramientos, losas, cubiertas, estructuras y trabajos exteriores, además de ampliaciones y remodelaciones.</p></div>
+          <div class="s-type"><h3>Obras complementarias</h3><p>Losas, cubiertas, estructuras, adecuaciones exteriores y remodelaciones. También construimos cerramientos convencionales y de diseño personalizado.</p></div>
         </div>
+        <p class="s-more-link">¿Necesita delimitar su terreno? <a href="#cerramientos">Conozca nuestros cerramientos, precios y alternativas de diseño →</a></p>
         <div class="s-inline-cta"><a class="s-link-btn" href="https://wa.me/593992941294?text=Buenos%20d%C3%ADas%2C%20deseo%20informaci%C3%B3n%20para%20una%20construcci%C3%B3n.%20El%20tipo%20de%20obra%2C%20ubicaci%C3%B3n%20y%20alcance%20previsto%20son%3A" target="_blank" rel="noopener noreferrer">Consultar por construcción ↗</a><span>Indíquenos el tipo de obra, su ubicación y el alcance previsto.</span></div>
+      </div>
+    </section>
+
+    <!-- ESPECIALIDAD: CERRAMIENTOS (servicio dentro de construcción de obras civiles) -->
+    <section class="s-fences" id="cerramientos" aria-labelledby="cerramientos-title">
+      <div class="s-wrap">
+        <header class="s-fences-header">
+          <p class="s-index"><span>03.1</span> ESPECIALIDAD EN CONSTRUCCIÓN</p>
+          <h2 id="cerramientos-title">Construcción de cerramientos perimetrales</h2>
+          <p class="s-lede">Delimitamos y protegemos su propiedad con cerramientos de bloque, ladrillo y acabados decorativos. Contamos con alternativas tradicionales de precios referenciales y proyectos frontales de diseño arquitectónico completamente personalizado.</p>
+        </header>
+        <div class="s-fences-intro">
+          <figure class="s-photo-frame s-fence-photo">
+            <a class="s-photo-link" href="images/construccion-cerramientos.png" target="_blank" rel="noopener" aria-label="Ampliar fotografía de cerramiento tradicional">
+              <img src="images/construccion-cerramientos.png" alt="Cerramiento perimetral de bloques de hormigón con columnas y cimentación en terreno natural" loading="lazy" decoding="async" width="1199" height="1312">
+            </a>
+            <figcaption class="s-photo-label"><span>Cerramientos tradicionales</span><span>04 / AP</span></figcaption>
+          </figure>
+          <div class="s-fences-details">
+            <span class="s-small-label">OPCIONES PARA SU PROPIEDAD</span>
+            <h3>Solidez, funcionalidad y acabados a su elección.</h3>
+            <p>Construimos cerramientos para terrenos y viviendas, de acuerdo con las características de cada predio. Las alternativas pueden incluir bloque sin enlucir, bloque enlucido, ladrillo y bloque texturado tipo piedra.</p>
+            <p>La <strong>altura de referencia para los precios es de 2,50 m</strong>. También ejecutamos cerramientos de otras alturas y dimensiones, según su necesidad, las condiciones técnicas y la normativa aplicable.</p>
+            <ul class="s-check-list">
+              <li>Proyectos de distintas longitudes y alturas.</li>
+              <li>Opciones con bloque, ladrillo y texturas decorativas.</li>
+              <li>Personalización de acabados y detalles constructivos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="s-prices" aria-labelledby="s-price-title">
+          <div class="s-prices-top">
+            <div>
+              <p class="s-small-label">PRECIOS REFERENCIALES</p>
+              <h3 id="s-price-title">Un cerramiento a su medida.</h3>
+              <p>Cotizaciones iniciales para una altura de referencia de <strong>2,50 metros</strong>.</p>
+            </div>
+            <div class="s-price-hero"><small>Desde</small><strong>$85<span>/ml</span></strong><small>metro lineal · precio base</small></div>
+          </div>
+          <div class="s-price-table" role="table" aria-label="Precios de cerramientos por metro lineal, desde valores indicados">
+            <div class="s-price-row s-price-row-head" role="row"><span role="columnheader">Tipo de cerramiento</span><span role="columnheader">Precio desde</span></div>
+            <div class="s-price-row" role="row"><span role="cell">Bloque sin enlucir</span><strong role="cell">$85/ml</strong></div>
+            <div class="s-price-row" role="row"><span role="cell">Bloque enlucido a una cara</span><strong role="cell">$100/ml</strong></div>
+            <div class="s-price-row" role="row"><span role="cell">Ladrillo sin enlucir</span><strong role="cell">$100/ml</strong></div>
+            <div class="s-price-row" role="row"><span role="cell">Ladrillo enlucido</span><strong role="cell">$115/ml</strong></div>
+            <div class="s-price-row" role="row"><span role="cell">Bloque texturado tipo piedra</span><strong role="cell">$115/ml</strong></div>
+          </div>
+          <div class="s-permit-note">
+            <span class="s-permit-icon" aria-hidden="true">✓</span>
+            <div><strong>Tramitación del permiso de cerramiento incluida.</strong>
+            <p>Los valores contemplan el servicio de gestión del permiso de cerramiento, sujeto a la ubicación y condiciones del proyecto. Las tasas municipales y demás valores oficiales, cuando correspondan, se aclararán en la cotización.</p></div>
+          </div>
+          <p class="s-price-fine">Todos los valores son <strong>precios desde</strong>, por metro lineal y para una altura referencial de 2,50 m. El precio final depende de la longitud, condiciones del terreno, ubicación, cimentación, acabados y elementos adicionales. Otras alturas se cotizan individualmente.</p>
+          <a class="s-link-btn" href="https://wa.me/593992941294?text=Buenos%20d%C3%ADas%2C%20deseo%20cotizar%20la%20construcci%C3%B3n%20de%20un%20cerramiento.%20El%20tipo%2C%20longitud%20aproximada%2C%20altura%20y%20ubicaci%C3%B3n%20son%3A" target="_blank" rel="noopener noreferrer">Cotizar mi cerramiento ↗</a>
+        </div>
+
+        <div class="s-fence-customize">
+          <h3>Personalice los detalles de su cerramiento</h3>
+          <p>Podemos incorporar soluciones complementarias de acuerdo con el diseño y las condiciones constructivas:</p>
+          <div class="s-custom-tags" aria-label="Elementos personalizables">
+            <span>Canalización eléctrica</span><span>Viga superior</span><span>Molduras</span><span>Iluminación</span><span>Verjas y portones</span><span>Revestimientos</span>
+          </div>
+          <p class="s-custom-small">Los elementos adicionales se definen y presupuestan según las necesidades de cada proyecto.</p>
+        </div>
+
+        <div class="s-custom-front" aria-labelledby="cerramiento-personalizado-title">
+          <div class="s-custom-front-text">
+            <p class="s-small-label">DISEÑO PERSONALIZADO · FRENTE DE PROPIEDAD</p>
+            <h3 id="cerramiento-personalizado-title">La primera impresión de su propiedad comienza en el cerramiento.</h3>
+            <p>El cerramiento frontal forma parte de la identidad arquitectónica de una vivienda. Diseñamos propuestas completamente personalizadas, considerando sus preferencias, el estilo de la edificación, los accesos y las necesidades de seguridad y funcionalidad.</p>
+            <p>Podemos integrar portones, accesos peatonales, verjas metálicas, revestimientos, molduras e iluminación arquitectónica para crear un conjunto coherente con su propiedad.</p>
+            <div class="s-custom-steps"><div><b>01</b><span>Diseño arquitectónico<br>personalizado</span></div><div><b>02</b><span>Cotización según<br>el diseño aprobado</span></div><div><b>03</b><span>Construcción<br>del proyecto</span></div></div>
+            <p class="s-custom-pricing">A diferencia de los cerramientos tradicionales, <strong>estos proyectos no tienen un precio fijo por metro lineal</strong>: se diseñan, presupuestan y construyen según el alcance aprobado.</p>
+            <a class="s-link-btn" href="https://wa.me/593992941294?text=Buenos%20d%C3%ADas%2C%20deseo%20dise%C3%B1ar%20y%20construir%20un%20cerramiento%20frontal%20personalizado.%20Las%20medidas%2C%20ubicaci%C3%B3n%20y%20caracter%C3%ADsticas%20que%20busco%20son%3A" target="_blank" rel="noopener noreferrer">Consultar diseño personalizado ↗</a>
+          </div>
+          <figure class="s-photo-frame s-custom-photo">
+            <a class="s-photo-link" href="images/cerramiento-diseno-personalizado.png" target="_blank" rel="noopener" aria-label="Ampliar imagen de cerramiento frontal de diseño personalizado">
+              <img src="images/cerramiento-diseno-personalizado.png" alt="Visualización de cerramiento frontal contemporáneo con portón vehicular, acceso peatonal, verjas decorativas y luz arquitectónica" loading="lazy" decoding="async" width="1810" height="869">
+            </a>
+            <figcaption class="s-photo-label"><span>Cerramiento frontal de diseño personalizado</span><span>05 / AP</span></figcaption>
+            <p class="s-photo-caption">Visualización arquitectónica ilustrativa de las posibilidades de diseño.</p>
+          </figure>
+        </div>
       </div>
     </section>
   </main>
